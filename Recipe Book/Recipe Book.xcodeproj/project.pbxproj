@@ -13,6 +13,7 @@
 		AFC1507529D49134003A1699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC1507329D49134003A1699 /* Main.storyboard */; };
 		AFC1507729D49135003A1699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC1507629D49135003A1699 /* Assets.xcassets */; };
 		AFC1507A29D49135003A1699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC1507829D49135003A1699 /* LaunchScreen.storyboard */; };
+		AFC1508329D4A156003A1699 /* ModelPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1508229D4A156003A1699 /* ModelPlaceholder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AFC1507629D49135003A1699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFC1507929D49135003A1699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFC1507B29D49135003A1699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFC1508229D4A156003A1699 /* ModelPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPlaceholder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		AFC1506C29D49134003A1699 /* Recipe Book */ = {
 			isa = PBXGroup;
 			children = (
+				AFC1508129D4A146003A1699 /* Models */,
 				AFC1506D29D49134003A1699 /* AppDelegate.swift */,
 				AFC1506F29D49134003A1699 /* SceneDelegate.swift */,
 				AFC1507129D49134003A1699 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				AFC1507B29D49135003A1699 /* Info.plist */,
 			);
 			path = "Recipe Book";
+			sourceTree = "<group>";
+		};
+		AFC1508129D4A146003A1699 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFC1508229D4A156003A1699 /* ModelPlaceholder.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFC1507229D49134003A1699 /* ViewController.swift in Sources */,
+				AFC1508329D4A156003A1699 /* ModelPlaceholder.swift in Sources */,
 				AFC1506E29D49134003A1699 /* AppDelegate.swift in Sources */,
 				AFC1507029D49134003A1699 /* SceneDelegate.swift in Sources */,
 			);
