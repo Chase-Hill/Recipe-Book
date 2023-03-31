@@ -9,6 +9,11 @@ import UIKit
 
 class UserRecipeIngredientsViewController: UIViewController {
 
+    // MARK: - Outlets
+    
+    @IBOutlet weak var userCreatedIngredientsTextView: UITextView!
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 

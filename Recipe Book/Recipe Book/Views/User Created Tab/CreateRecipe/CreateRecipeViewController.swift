@@ -9,13 +9,22 @@ import UIKit
 
 class CreateRecipeViewController: UIViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var createRecipeImageView: UIImageView!
+    @IBOutlet weak var ingredientsTableView: UITableView!
+    @IBOutlet weak var createRecipeInstructionsTextView: UITextView!
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    // MARK: - Actions
+    @IBAction func addIngredientButtonTapped(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

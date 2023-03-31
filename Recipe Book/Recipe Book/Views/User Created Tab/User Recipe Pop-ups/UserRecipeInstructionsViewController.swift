@@ -9,6 +9,10 @@ import UIKit
 
 class UserRecipeInstructionsViewController: UIViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var userCreatedInstructionsTextView: UITextView!
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
