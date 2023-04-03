@@ -333,7 +333,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="List of Instructions" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ION-ou-cBN">
-                                <rect key="frame" x="16" y="20" width="361" height="729"/>
+                                <rect key="frame" x="16" y="48" width="361" height="701"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -351,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3b-8p-Uba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2500" y="1604"/>
+            <point key="canvasLocation" x="2500" y="1603.5211267605634"/>
         </scene>
         <!--User Recipe Ingredients View Controller-->
         <scene sceneID="sXE-4X-NXu">
@@ -362,7 +362,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Listed Ingredients" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="I9p-Pm-02C">
-                                <rect key="frame" x="16" y="20" width="361" height="729"/>
+                                <rect key="frame" x="16" y="44" width="361" height="705"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -379,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWQ-04-0bN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3294" y="1604"/>
+            <point key="canvasLocation" x="3293.8931297709923" y="1603.5211267605634"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Cz2-T5-BaE">
@@ -554,7 +554,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search by Recipe or Ingredients" translatesAutoresizingMaskIntoConstraints="NO" id="Nu2-mN-1G8">
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search by Recipe Name" translatesAutoresizingMaskIntoConstraints="NO" id="Nu2-mN-1G8">
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -583,7 +583,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2891" y="-608"/>
+            <point key="canvasLocation" x="2890.8396946564885" y="-608.45070422535218"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="12I-kw-JdT">

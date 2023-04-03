@@ -36,6 +36,8 @@
 		AF41A38129D671A2000CC40A /* IngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A38029D671A2000CC40A /* IngredientsTableViewCell.swift */; };
 		AF42647A29DB3EC8004852E1 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42647929DB3EC8004852E1 /* FirebaseService.swift */; };
 		AF42647D29DB40A1004852E1 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42647C29DB40A1004852E1 /* NetworkErrors.swift */; };
+		AF42647F29DB485A004852E1 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42647E29DB485A004852E1 /* APIService.swift */; };
+		AF42648129DB4866004852E1 /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42648029DB4866004852E1 /* MealService.swift */; };
 		AFC1506E29D49134003A1699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1506D29D49134003A1699 /* AppDelegate.swift */; };
 		AFC1507029D49134003A1699 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1506F29D49134003A1699 /* SceneDelegate.swift */; };
 		AFC1507529D49134003A1699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC1507329D49134003A1699 /* Main.storyboard */; };
@@ -71,6 +73,8 @@
 		AF41A38029D671A2000CC40A /* IngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCell.swift; sourceTree = "<group>"; };
 		AF42647929DB3EC8004852E1 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		AF42647C29DB40A1004852E1 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		AF42647E29DB485A004852E1 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		AF42648029DB4866004852E1 /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
 		AFC1506A29D49134003A1699 /* Recipe Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC1506D29D49134003A1699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFC1506F29D49134003A1699 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -253,6 +257,8 @@
 			children = (
 				AF42647929DB3EC8004852E1 /* FirebaseService.swift */,
 				AF42647C29DB40A1004852E1 /* NetworkErrors.swift */,
+				AF42647E29DB485A004852E1 /* APIService.swift */,
+				AF42648029DB4866004852E1 /* MealService.swift */,
 			);
 			path = "Helper Files";
 			sourceTree = "<group>";
@@ -377,11 +383,13 @@
 			files = (
 				AF41A34229D63300000CC40A /* SignUpViewController.swift in Sources */,
 				AF41A36B29D63DED000CC40A /* MealDBViewModel.swift in Sources */,
+				AF42647F29DB485A004852E1 /* APIService.swift in Sources */,
 				AF41A37D29D66F27000CC40A /* FavoritesCollectionViewCell.swift in Sources */,
 				AFC1508329D4A156003A1699 /* MealDB.swift in Sources */,
 				AF41A35529D634E7000CC40A /* UserRecipeInstructionsViewController.swift in Sources */,
 				AF41A37B29D648F1000CC40A /* MealDBCollectionViewCell.swift in Sources */,
 				AF41A34929D63398000CC40A /* MealDBIngredientsViewController.swift in Sources */,
+				AF42648129DB4866004852E1 /* MealService.swift in Sources */,
 				AF41A35F29D63C5A000CC40A /* SignUpViewModel.swift in Sources */,
 				AF41A34B29D633D7000CC40A /* FavoritesInstructionsViewController.swift in Sources */,
 				AF41A35029D63417000CC40A /* FavoritesCollectionViewController.swift in Sources */,
