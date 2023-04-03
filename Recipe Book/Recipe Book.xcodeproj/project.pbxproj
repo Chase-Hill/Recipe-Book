@@ -34,6 +34,8 @@
 		AF41A37D29D66F27000CC40A /* FavoritesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A37C29D66F27000CC40A /* FavoritesCollectionViewCell.swift */; };
 		AF41A37F29D67057000CC40A /* UserCreatedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A37E29D67057000CC40A /* UserCreatedCollectionViewCell.swift */; };
 		AF41A38129D671A2000CC40A /* IngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A38029D671A2000CC40A /* IngredientsTableViewCell.swift */; };
+		AF42647A29DB3EC8004852E1 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42647929DB3EC8004852E1 /* FirebaseService.swift */; };
+		AF42647D29DB40A1004852E1 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42647C29DB40A1004852E1 /* NetworkErrors.swift */; };
 		AFC1506E29D49134003A1699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1506D29D49134003A1699 /* AppDelegate.swift */; };
 		AFC1507029D49134003A1699 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1506F29D49134003A1699 /* SceneDelegate.swift */; };
 		AFC1507529D49134003A1699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC1507329D49134003A1699 /* Main.storyboard */; };
@@ -67,6 +69,8 @@
 		AF41A37C29D66F27000CC40A /* FavoritesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF41A37E29D67057000CC40A /* UserCreatedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreatedCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF41A38029D671A2000CC40A /* IngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCell.swift; sourceTree = "<group>"; };
+		AF42647929DB3EC8004852E1 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		AF42647C29DB40A1004852E1 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		AFC1506A29D49134003A1699 /* Recipe Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC1506D29D49134003A1699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFC1506F29D49134003A1699 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -244,6 +248,15 @@
 			path = "MealDB Pop-ups";
 			sourceTree = "<group>";
 		};
+		AF42647B29DB3ECE004852E1 /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF42647929DB3EC8004852E1 /* FirebaseService.swift */,
+				AF42647C29DB40A1004852E1 /* NetworkErrors.swift */,
+			);
+			path = "Helper Files";
+			sourceTree = "<group>";
+		};
 		AFC1506129D49134003A1699 = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +278,7 @@
 			children = (
 				AF41A36F29D644D7000CC40A /* GoogleService-Info (2).plist */,
 				AF41A33C29D625C3000CC40A /* Supporting Files */,
+				AF42647B29DB3ECE004852E1 /* Helper Files */,
 				AF41A33B29D62597000CC40A /* Storyboard */,
 				AFC1508129D4A146003A1699 /* Models */,
 				AF41A33F29D632CC000CC40A /* Views */,
@@ -275,8 +289,8 @@
 		AFC1508129D4A146003A1699 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AFC1508229D4A156003A1699 /* MealDB.swift */,
 				AF41A33929D620BE000CC40A /* Recipe.swift */,
+				AFC1508229D4A156003A1699 /* MealDB.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -374,9 +388,11 @@
 				AF41A34729D6338B000CC40A /* MealDBInstructionsViewController.swift in Sources */,
 				AFC1506E29D49134003A1699 /* AppDelegate.swift in Sources */,
 				AF41A33A29D620BE000CC40A /* Recipe.swift in Sources */,
+				AF42647A29DB3EC8004852E1 /* FirebaseService.swift in Sources */,
 				AF41A35D29D63C4F000CC40A /* SignInViewModel.swift in Sources */,
 				AF41A34E29D633ED000CC40A /* FavoritesIngredientsViewController.swift in Sources */,
 				AF41A33E29D632C5000CC40A /* SignInViewController.swift in Sources */,
+				AF42647D29DB40A1004852E1 /* NetworkErrors.swift in Sources */,
 				AF41A35929D63513000CC40A /* CreateRecipeViewController.swift in Sources */,
 				AF41A37929D648DB000CC40A /* MealDBViewController.swift in Sources */,
 				AF41A35229D634BC000CC40A /* UserRecipesCollectionViewController.swift in Sources */,
@@ -538,8 +554,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -565,8 +581,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
