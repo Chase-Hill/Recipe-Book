@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+// MARK: - Properties
+var mealDB: MealDBRecipe?
+let service = MealService()
+
+// MARK: - Functions
+func fetchRecipe() {
+}

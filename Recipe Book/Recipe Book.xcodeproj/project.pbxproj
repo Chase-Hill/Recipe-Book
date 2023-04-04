@@ -25,7 +25,6 @@
 		AF41A36729D63CEC000CC40A /* UserRecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A36629D63CEC000CC40A /* UserRecipesViewModel.swift */; };
 		AF41A36B29D63DED000CC40A /* MealDBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A36A29D63DED000CC40A /* MealDBViewModel.swift */; };
 		AF41A36E29D63E41000CC40A /* CreateRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A36D29D63E41000CC40A /* CreateRecipeViewModel.swift */; };
-		AF41A37029D644D7000CC40A /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = AF41A36F29D644D7000CC40A /* GoogleService-Info (2).plist */; };
 		AF41A37329D645B2000CC40A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AF41A37229D645B2000CC40A /* FirebaseAuth */; };
 		AF41A37529D645B2000CC40A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AF41A37429D645B2000CC40A /* FirebaseFirestore */; };
 		AF41A37729D645B2000CC40A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AF41A37629D645B2000CC40A /* FirebaseStorage */; };
@@ -38,12 +37,15 @@
 		AF42647D29DB40A1004852E1 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42647C29DB40A1004852E1 /* NetworkErrors.swift */; };
 		AF42647F29DB485A004852E1 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42647E29DB485A004852E1 /* APIService.swift */; };
 		AF42648129DB4866004852E1 /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42648029DB4866004852E1 /* MealService.swift */; };
+		AF42648329DB7293004852E1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42648229DB7293004852E1 /* Meal.swift */; };
 		AFC1506E29D49134003A1699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1506D29D49134003A1699 /* AppDelegate.swift */; };
 		AFC1507029D49134003A1699 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1506F29D49134003A1699 /* SceneDelegate.swift */; };
 		AFC1507529D49134003A1699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC1507329D49134003A1699 /* Main.storyboard */; };
 		AFC1507729D49135003A1699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC1507629D49135003A1699 /* Assets.xcassets */; };
 		AFC1507A29D49135003A1699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC1507829D49135003A1699 /* LaunchScreen.storyboard */; };
 		AFC1508329D4A156003A1699 /* MealDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1508229D4A156003A1699 /* MealDB.swift */; };
+		AFCA193229DC80C9006C9A67 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA193129DC80C9006C9A67 /* Constants.swift */; };
+		AFCA193429DCBAD6006C9A67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFCA193329DCBAD6006C9A67 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +67,6 @@
 		AF41A36629D63CEC000CC40A /* UserRecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipesViewModel.swift; sourceTree = "<group>"; };
 		AF41A36A29D63DED000CC40A /* MealDBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBViewModel.swift; sourceTree = "<group>"; };
 		AF41A36D29D63E41000CC40A /* CreateRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecipeViewModel.swift; sourceTree = "<group>"; };
-		AF41A36F29D644D7000CC40A /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info (2).plist"; path = "../../../../../Downloads/GoogleService-Info (2).plist"; sourceTree = "<group>"; };
 		AF41A37829D648DB000CC40A /* MealDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBViewController.swift; sourceTree = "<group>"; };
 		AF41A37A29D648F1000CC40A /* MealDBCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF41A37C29D66F27000CC40A /* FavoritesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		AF42647C29DB40A1004852E1 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		AF42647E29DB485A004852E1 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		AF42648029DB4866004852E1 /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
+		AF42648229DB7293004852E1 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		AFC1506A29D49134003A1699 /* Recipe Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC1506D29D49134003A1699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFC1506F29D49134003A1699 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,8 @@
 		AFC1507929D49135003A1699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFC1507B29D49135003A1699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFC1508229D4A156003A1699 /* MealDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDB.swift; sourceTree = "<group>"; };
+		AFCA193129DC80C9006C9A67 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AFCA193329DCBAD6006C9A67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,8 +261,9 @@
 			children = (
 				AF42647929DB3EC8004852E1 /* FirebaseService.swift */,
 				AF42647C29DB40A1004852E1 /* NetworkErrors.swift */,
-				AF42647E29DB485A004852E1 /* APIService.swift */,
 				AF42648029DB4866004852E1 /* MealService.swift */,
+				AF42647E29DB485A004852E1 /* APIService.swift */,
+				AFCA193129DC80C9006C9A67 /* Constants.swift */,
 			);
 			path = "Helper Files";
 			sourceTree = "<group>";
@@ -282,7 +287,7 @@
 		AFC1506C29D49134003A1699 /* Recipe Book */ = {
 			isa = PBXGroup;
 			children = (
-				AF41A36F29D644D7000CC40A /* GoogleService-Info (2).plist */,
+				AFCA193329DCBAD6006C9A67 /* GoogleService-Info.plist */,
 				AF41A33C29D625C3000CC40A /* Supporting Files */,
 				AF42647B29DB3ECE004852E1 /* Helper Files */,
 				AF41A33B29D62597000CC40A /* Storyboard */,
@@ -297,6 +302,7 @@
 			children = (
 				AF41A33929D620BE000CC40A /* Recipe.swift */,
 				AFC1508229D4A156003A1699 /* MealDB.swift */,
+				AF42648229DB7293004852E1 /* Meal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -367,8 +373,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF41A37029D644D7000CC40A /* GoogleService-Info (2).plist in Resources */,
 				AFC1507A29D49135003A1699 /* LaunchScreen.storyboard in Resources */,
+				AFCA193429DCBAD6006C9A67 /* GoogleService-Info.plist in Resources */,
 				AFC1507729D49135003A1699 /* Assets.xcassets in Resources */,
 				AFC1507529D49134003A1699 /* Main.storyboard in Resources */,
 			);
@@ -388,6 +394,8 @@
 				AFC1508329D4A156003A1699 /* MealDB.swift in Sources */,
 				AF41A35529D634E7000CC40A /* UserRecipeInstructionsViewController.swift in Sources */,
 				AF41A37B29D648F1000CC40A /* MealDBCollectionViewCell.swift in Sources */,
+				AFCA193229DC80C9006C9A67 /* Constants.swift in Sources */,
+				AF42648329DB7293004852E1 /* Meal.swift in Sources */,
 				AF41A34929D63398000CC40A /* MealDBIngredientsViewController.swift in Sources */,
 				AF42648129DB4866004852E1 /* MealService.swift in Sources */,
 				AF41A35F29D63C5A000CC40A /* SignUpViewModel.swift in Sources */,

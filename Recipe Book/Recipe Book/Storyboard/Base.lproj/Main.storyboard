@@ -45,6 +45,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Sign In!">
                                     <color key="baseBackgroundColor" red="0.42582553629999997" green="0.61946022509999998" blue="0.31232330200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xP6-2t-spJ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3IT-fV-dIM">
                                 <rect key="frame" x="81" y="327" width="231" height="34"/>
@@ -108,6 +111,10 @@
                         <color key="backgroundColor" red="0.29160748106060608" green="0.24797195278878795" blue="0.18691563001559724" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="m7s-ZM-NwT"/>
+                    <connections>
+                        <outlet property="userEmailTextField" destination="3IT-fV-dIM" id="i27-pf-kH0"/>
+                        <outlet property="userPasswordTextField" destination="Uic-UB-qux" id="x6Q-84-tHi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="gZf-fD-xl7">
@@ -121,7 +128,7 @@
         <!--My Recipes-->
         <scene sceneID="PIa-8N-eC0">
             <objects>
-                <collectionViewController id="zKO-zq-o4e" customClass="UserRecipesCollectionViewController" customModule="Recipe_Book" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="HomeView" id="zKO-zq-o4e" customClass="UserRecipesCollectionViewController" customModule="Recipe_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ziw-Hh-fHz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -412,12 +419,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Create Account!"/>
+                                <connections>
+                                    <action selector="createAccountButtonTapped:" destination="EzE-be-16W" eventType="touchUpInside" id="xjf-19-s90"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w3k-ws-Zit"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="34U-YD-TMg"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="hvV-gS-W2d" id="FJ1-M1-cvb"/>
+                        <outlet property="userEmailTextField" destination="yaP-xI-JBr" id="zJj-rR-1IJ"/>
+                        <outlet property="userPasswordTextField" destination="ga4-xQ-gSM" id="udz-vs-Utb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuw-AS-NI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
