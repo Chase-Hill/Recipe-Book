@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MealServiceable {
+    
+}
+
 struct MealService {
     
     // MARK: - Properties
@@ -43,7 +47,22 @@ struct MealService {
         } .resume()
     }
     
+    #warning("Finish once I have everything else completed")
 //    func fetchMealsByIngredients(searchTerm: String, completion: @escaping(Result <[],>) -> Void) {
 //
 //    }
+    
+    func fetchImage(imageString: String, completion: @escaping (Result <UIImage, NetworkError>) -> Void) {
+        guard let imageURL = URL(string: imageString) else { completion(.failure(.invalidURL)) ; return }
+        URLSession.shared.dataTask(with: imageURL) { data, response, error in
+            if let error = error {
+                completion(.failure(.thrownError(error))) ; return
+            }
+            
+            guard let data = data else { completion(.failure(.noData)) ; return }
+            
+            guard let image = UIImage(data: data) else { completion(.failure(.unableToDecode)) ; return }
+            completion(.success(image))
+        } .resume()
+    }
 }

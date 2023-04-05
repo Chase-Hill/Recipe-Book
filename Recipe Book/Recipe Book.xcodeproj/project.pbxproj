@@ -202,9 +202,9 @@
 		AF41A36129D63C9E000CC40A /* Collection View */ = {
 			isa = PBXGroup;
 			children = (
+				AF41A36229D63CBA000CC40A /* FavoritesViewModel.swift */,
 				AF41A34F29D63417000CC40A /* FavoritesCollectionViewController.swift */,
 				AF41A37C29D66F27000CC40A /* FavoritesCollectionViewCell.swift */,
-				AF41A36229D63CBA000CC40A /* FavoritesViewModel.swift */,
 			);
 			path = "Collection View";
 			sourceTree = "<group>";
@@ -240,8 +240,8 @@
 		AF41A36929D63D06000CC40A /* Collection View */ = {
 			isa = PBXGroup;
 			children = (
-				AF41A37829D648DB000CC40A /* MealDBViewController.swift */,
 				AF41A36A29D63DED000CC40A /* MealDBViewModel.swift */,
+				AF41A37829D648DB000CC40A /* MealDBViewController.swift */,
 				AF41A37A29D648F1000CC40A /* MealDBCollectionViewCell.swift */,
 			);
 			path = "Collection View";
