@@ -523,8 +523,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lQK-0k-dHj" customClass="ServiceRequestingImageView" customModule="Recipe_Book" customModuleProvider="target">
-                                                    <rect key="frame" x="102.66666666666669" y="68.333333333333343" width="188" height="125.33333333333334"/>
+                                                    <rect key="frame" x="102.66666666666669" y="48.333333333333336" width="188" height="125.33333333333331"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="125.33333333333334" id="A9y-wE-vJk"/>
                                                         <constraint firstAttribute="width" secondItem="lQK-0k-dHj" secondAttribute="height" multiplier="3:2" id="kVb-GV-62B"/>
                                                     </constraints>
                                                 </imageView>
@@ -537,13 +538,13 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Recipe Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsJ-2b-cZd">
-                                                    <rect key="frame" x="140" y="38" width="113.33333333333331" height="20.333333333333329"/>
+                                                    <rect key="frame" x="140" y="13.999999999999998" width="113.33333333333331" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="cp4-Qt-byJ">
-                                                    <rect key="frame" x="79.000000000000014" y="213.66666666666666" width="235.33333333333337" height="20.333333333333343"/>
+                                                    <rect key="frame" x="79.000000000000014" y="193.66666666666666" width="235.33333333333337" height="20.333333333333343"/>
                                                     <subviews>
                                                         <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhB-M0-UiN">
                                                             <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="20.333333333333332"/>
@@ -551,9 +552,6 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
-                                                            <connections>
-                                                                <outletCollection property="gestureRecognizers" destination="9vE-xG-FFs" appends="YES" id="RKK-Nc-SeC"/>
-                                                            </connections>
                                                         </label>
                                                         <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsc-ig-pf1">
                                                             <rect key="frame" x="145.66666666666666" y="0.0" width="89.666666666666657" height="20.333333333333332"/>
@@ -561,28 +559,26 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
-                                                            <connections>
-                                                                <outletCollection property="gestureRecognizers" destination="Jb0-3n-sKx" appends="YES" id="XnP-uV-W75"/>
-                                                            </connections>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="lQK-0k-dHj" firstAttribute="centerY" secondItem="5HS-z2-EKl" secondAttribute="centerY" id="FVj-mu-UjH"/>
                                                 <constraint firstItem="tkd-LW-UwZ" firstAttribute="leading" secondItem="hsJ-2b-cZd" secondAttribute="trailing" constant="85.333333333333428" id="G49-95-cYU"/>
                                                 <constraint firstItem="cp4-Qt-byJ" firstAttribute="centerX" secondItem="5HS-z2-EKl" secondAttribute="centerX" id="JTH-J8-OiR"/>
                                                 <constraint firstItem="tkd-LW-UwZ" firstAttribute="top" secondItem="5HS-z2-EKl" secondAttribute="topMargin" constant="8" id="WqG-Qr-DdG"/>
                                                 <constraint firstItem="cp4-Qt-byJ" firstAttribute="top" secondItem="lQK-0k-dHj" secondAttribute="bottom" constant="20" id="ZrP-Ck-8QD"/>
+                                                <constraint firstItem="lQK-0k-dHj" firstAttribute="top" secondItem="hsJ-2b-cZd" secondAttribute="bottom" constant="14" id="a71-dk-WMe"/>
                                                 <constraint firstItem="lQK-0k-dHj" firstAttribute="centerX" secondItem="5HS-z2-EKl" secondAttribute="centerX" id="bMP-GT-alA"/>
-                                                <constraint firstItem="hsJ-2b-cZd" firstAttribute="top" secondItem="5HS-z2-EKl" secondAttribute="top" constant="38" id="dHw-hZ-MV0"/>
+                                                <constraint firstItem="hsJ-2b-cZd" firstAttribute="top" secondItem="5HS-z2-EKl" secondAttribute="top" constant="14" id="dHw-hZ-MV0"/>
                                                 <constraint firstItem="tkd-LW-UwZ" firstAttribute="trailing" secondItem="5HS-z2-EKl" secondAttribute="trailingMargin" constant="8" id="fiI-g1-Frt"/>
-                                                <constraint firstItem="lQK-0k-dHj" firstAttribute="top" secondItem="hsJ-2b-cZd" secondAttribute="bottom" constant="10" id="pGx-Oq-b3e"/>
                                                 <constraint firstItem="hsJ-2b-cZd" firstAttribute="centerX" secondItem="5HS-z2-EKl" secondAttribute="centerX" id="x93-j7-5QG"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="393" height="262"/>
                                         <connections>
+                                            <outlet property="ingredientsLabel" destination="Dsc-ig-pf1" id="UOE-85-bmZ"/>
+                                            <outlet property="instructionsLabel" destination="dhB-M0-UiN" id="d2R-Kn-7Eb"/>
                                             <outlet property="mealImageView" destination="lQK-0k-dHj" id="NS0-3k-gG0"/>
                                             <outlet property="recipeNameLabel" destination="hsJ-2b-cZd" id="v8z-hn-Kbw"/>
                                         </connections>
@@ -619,16 +615,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCr-Lg-Shi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="9vE-xG-FFs">
-                    <connections>
-                        <segue destination="HNm-vp-Qgx" kind="show" id="nh4-YL-OtF"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="Jb0-3n-sKx">
-                    <connections>
-                        <segue destination="TyY-6N-693" kind="show" id="K7C-hO-QXe"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2890.8396946564885" y="-608.45070422535218"/>
         </scene>
@@ -723,9 +709,9 @@
         <!--MealDB Instructions View Controller-->
         <scene sceneID="SEQ-IF-6X8">
             <objects>
-                <viewController id="HNm-vp-Qgx" customClass="MealDBInstructionsViewController" customModule="Recipe_Book" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="instructionsModal" id="HNm-vp-Qgx" customClass="MealDBInstructionsViewController" customModule="Recipe_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uod-Wm-Otg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="List of Instructions" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NPB-c6-prG">
@@ -752,9 +738,9 @@
         <!--MealDB Ingredients View Controller-->
         <scene sceneID="iC3-u5-v1A">
             <objects>
-                <viewController id="TyY-6N-693" customClass="MealDBIngredientsViewController" customModule="Recipe_Book" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ingredientsModal" id="TyY-6N-693" customClass="MealDBIngredientsViewController" customModule="Recipe_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g1W-wK-beP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Listed Ingredients" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tvE-R0-ahg">

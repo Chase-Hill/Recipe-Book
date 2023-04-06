@@ -22,6 +22,7 @@ class MealDBViewController: UIViewController {
         // Note: - Set my GOD DAMN DELEGATE
         mealDBSearchBar.delegate = self
         mealDBCollectionView.dataSource = self
+		mealDBCollectionView.delegate = self
         viewModel = MealDBViewModel(delegate: self)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -37,7 +38,7 @@ extension MealDBViewController: MealDBViewModelDelegate {
     }
 }
 
-extension MealDBViewController: UICollectionViewDataSource {
+extension MealDBViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.meals.count
     }
@@ -47,9 +48,25 @@ extension MealDBViewController: UICollectionViewDataSource {
         let recipe = viewModel.meals[indexPath.item]
         cell.configUI(with: recipe)
         cell.fetchImage(with: recipe)
+
+		let instructionsTapGesture = UITapGestureRecognizer(target: self, action: #selector(instructionsLabelTapped(_:)))
+		let ingredientsTapGesture = UITapGestureRecognizer(target: self, action: #selector(ingredientsLabelTapped(_:)))
+		cell.instructionsLabel.addGestureRecognizer(instructionsTapGesture)
+		cell.ingredientsLabel.addGestureRecognizer(ingredientsTapGesture)
         
         return cell
     }
+
+	@objc func instructionsLabelTapped(_ sender: UITapGestureRecognizer) {
+		guard let modalViewController = self.storyboard?.instantiateViewController(withIdentifier: "instructionsModal") else { return }
+		self.present(modalViewController, animated: true, completion: nil)
+	}
+
+	@objc func ingredientsLabelTapped(_ sender: UITapGestureRecognizer) {
+		guard let viewController = mealDBCollectionView.delegate as? UIViewController else { return }
+		guard let modalViewController = viewController.storyboard?.instantiateViewController(withIdentifier: "ingredientsModal") else { return }
+		viewController.present(modalViewController, animated: true, completion: nil)
+	}
 }
 
 extension MealDBViewController: UISearchBarDelegate {
