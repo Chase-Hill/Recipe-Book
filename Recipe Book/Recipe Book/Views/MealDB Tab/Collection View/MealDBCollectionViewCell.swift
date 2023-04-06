@@ -24,4 +24,10 @@ class MealDBCollectionViewCell: UICollectionViewCell {
         guard let imageURL = URL(string: urlString) else { return }
         mealImageView.fetchImage(using: imageURL)
     }
+    
+    func configUI(with recipe: MealDBRecipe) {
+        DispatchQueue.main.async {
+            self.recipeNameLabel.text = recipe.mealName
+        }
+    }
 }

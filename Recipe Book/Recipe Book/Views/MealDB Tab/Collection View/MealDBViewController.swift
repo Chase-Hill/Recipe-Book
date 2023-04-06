@@ -21,6 +21,7 @@ class MealDBViewController: UIViewController {
         super.viewDidLoad()
         // Note: - Set my GOD DAMN DELEGATE
         mealDBSearchBar.delegate = self
+        mealDBCollectionView.dataSource = self
         viewModel = MealDBViewModel(delegate: self)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -43,6 +44,9 @@ extension MealDBViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recipeCell", for: indexPath) as? MealDBCollectionViewCell else { return UICollectionViewCell() }
+        let recipe = viewModel.meals[indexPath.item]
+        cell.configUI(with: recipe)
+        cell.fetchImage(with: recipe)
         
         return cell
     }

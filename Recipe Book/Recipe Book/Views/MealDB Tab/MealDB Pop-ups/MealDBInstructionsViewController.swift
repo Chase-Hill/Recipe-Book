@@ -23,7 +23,9 @@ class MealDBInstructionsViewController: UIViewController {
     
     // MARK: - Functions
     func updateUI() {
-        guard let instructions = recipe?.instructions else { return }
-        mealDBInstructionsTextView.text = instructions
+        DispatchQueue.main.async {
+            guard let instructions = self.recipe?.instructions else { return }
+            self.mealDBInstructionsTextView.text = instructions
+        }
     }
 }
