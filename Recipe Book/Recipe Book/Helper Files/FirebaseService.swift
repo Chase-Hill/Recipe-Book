@@ -16,7 +16,7 @@ struct FirebaseService {
     let storage = Storage.storage().reference()
     
     // MARK: - Functions
-    func save(instructions: String, ingredients: String, image: UIImage, completion: @escaping () -> Void) {
+    func saveRecipe(instructions: String, ingredients: String, image: UIImage, completion: @escaping () -> Void) {
         
         let uuid = UUID().uuidString
     }

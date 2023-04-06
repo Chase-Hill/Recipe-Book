@@ -8,10 +8,11 @@
 import UIKit
 
 protocol MealServiceable {
-    
+    func fetchMealsByName(searchTerm: String, completion: @escaping(Result <[MealDBRecipe], NetworkError>) -> Void)
+    func fetchImage(imageString: String, completion: @escaping (Result <UIImage, NetworkError>) -> Void)
 }
 
-struct MealService {
+struct MealService: MealServiceable {
     
     // MARK: - Properties
     let service = APIService()

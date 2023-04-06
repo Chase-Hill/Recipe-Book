@@ -12,22 +12,18 @@ class MealDBInstructionsViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var mealDBInstructionsTextView: UITextView!
     
+    // MARK: - Properties
+    var recipe: MealDBRecipe?
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Functions
+    func updateUI() {
+        guard let instructions = recipe?.instructions else { return }
+        mealDBInstructionsTextView.text = instructions
     }
-    */
-
 }

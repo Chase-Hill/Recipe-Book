@@ -11,6 +11,7 @@ class MealDBViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var mealDBSearchBar: UISearchBar!
+    @IBOutlet weak var mealDBCollectionView: UICollectionView!
     
     // MARK: - Properties
     var viewModel: MealDBViewModel!
@@ -21,16 +22,29 @@ class MealDBViewController: UIViewController {
         // Note: - Set my GOD DAMN DELEGATE
         mealDBSearchBar.delegate = self
         viewModel = MealDBViewModel(delegate: self)
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
     }
-    
-    // MARK: - Functions
-    
 }
 
 // MARK: - Extensions
 extension MealDBViewController: MealDBViewModelDelegate {
     func updateViews() {
-        // Note: - Finish the code 
+        DispatchQueue.main.async {
+            self.mealDBCollectionView.reloadData()
+        }
+    }
+}
+
+extension MealDBViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.meals.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recipeCell", for: indexPath) as? MealDBCollectionViewCell else { return UICollectionViewCell() }
+        
+        return cell
     }
 }
 

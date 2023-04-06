@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZpS-PB-Dk8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ni9-gN-9Zy">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -505,9 +505,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SJH-F4-jxD">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SJH-F4-jxD">
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NIf-dX-KvM">
                                     <size key="itemSize" width="392" height="230"/>
@@ -516,20 +515,18 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6F9-yJ-yaV" customClass="MealDBCollectionViewCell" customModule="Recipe_Book" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recipeCell" id="6F9-yJ-yaV" customClass="MealDBCollectionViewCell" customModule="Recipe_Book" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="262"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5HS-z2-EKl">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="262"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lQK-0k-dHj">
-                                                    <rect key="frame" x="76" y="40" width="240" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lQK-0k-dHj">
+                                                    <rect key="frame" x="76" y="67" width="241" height="128"/>
                                                 </imageView>
-                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhB-M0-UiN">
-                                                    <rect key="frame" x="76" y="197" width="90" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhB-M0-UiN">
+                                                    <rect key="frame" x="76" y="215" width="90" height="21"/>
                                                     <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -538,9 +535,8 @@
                                                         <outletCollection property="gestureRecognizers" destination="9vE-xG-FFs" appends="YES" id="RKK-Nc-SeC"/>
                                                     </connections>
                                                 </label>
-                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsc-ig-pf1">
-                                                    <rect key="frame" x="230" y="197" width="86" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsc-ig-pf1">
+                                                    <rect key="frame" x="230" y="215" width="86" height="21"/>
                                                     <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -549,29 +545,54 @@
                                                         <outletCollection property="gestureRecognizers" destination="Jb0-3n-sKx" appends="YES" id="XnP-uV-W75"/>
                                                     </connections>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkd-LW-UwZ">
-                                                    <rect key="frame" x="338" y="8" width="47" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkd-LW-UwZ">
+                                                    <rect key="frame" x="338.66666666666669" y="8" width="46.333333333333314" height="35"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="bookmark" catalog="system"/>
                                                     <connections>
                                                         <action selector="bookmarkButtonTapped:" destination="6F9-yJ-yaV" eventType="touchUpInside" id="5SP-Qh-7ps"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Recipe Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsJ-2b-cZd">
+                                                    <rect key="frame" x="139.66666666666666" y="38" width="114" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Dsc-ig-pf1" firstAttribute="baseline" secondItem="dhB-M0-UiN" secondAttribute="baseline" id="0Fy-E8-l2L"/>
+                                                <constraint firstItem="hsJ-2b-cZd" firstAttribute="centerX" secondItem="5HS-z2-EKl" secondAttribute="centerX" id="7Az-gH-BPS"/>
+                                                <constraint firstItem="tkd-LW-UwZ" firstAttribute="trailing" secondItem="5HS-z2-EKl" secondAttribute="trailingMargin" id="8Hv-64-Yc3"/>
+                                                <constraint firstItem="Dsc-ig-pf1" firstAttribute="leading" secondItem="dhB-M0-UiN" secondAttribute="trailing" constant="64" id="DfL-we-wa1"/>
+                                                <constraint firstItem="dhB-M0-UiN" firstAttribute="top" secondItem="lQK-0k-dHj" secondAttribute="bottom" constant="20" id="O0o-ki-maf"/>
+                                                <constraint firstItem="lQK-0k-dHj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Dsc-ig-pf1" secondAttribute="trailing" id="PAA-xq-k5m"/>
+                                                <constraint firstItem="tkd-LW-UwZ" firstAttribute="top" secondItem="5HS-z2-EKl" secondAttribute="topMargin" id="SFU-T1-7qt"/>
+                                                <constraint firstItem="lQK-0k-dHj" firstAttribute="leading" secondItem="dhB-M0-UiN" secondAttribute="leading" id="Vx5-Lm-wUH"/>
+                                                <constraint firstItem="hsJ-2b-cZd" firstAttribute="centerX" secondItem="lQK-0k-dHj" secondAttribute="centerX" id="dYd-Fe-OK5"/>
+                                                <constraint firstItem="lQK-0k-dHj" firstAttribute="top" secondItem="hsJ-2b-cZd" secondAttribute="bottom" constant="8" id="h76-qs-QaG"/>
+                                                <constraint firstItem="lQK-0k-dHj" firstAttribute="leading" secondItem="5HS-z2-EKl" secondAttribute="leading" constant="76" id="h94-NH-3Ty"/>
+                                                <constraint firstItem="lQK-0k-dHj" firstAttribute="centerY" secondItem="5HS-z2-EKl" secondAttribute="centerY" id="it1-Ld-paU"/>
+                                                <constraint firstItem="hsJ-2b-cZd" firstAttribute="top" secondItem="5HS-z2-EKl" secondAttribute="top" constant="38" id="mEU-8y-jr5"/>
+                                                <constraint firstItem="Dsc-ig-pf1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dhB-M0-UiN" secondAttribute="trailing" symbolic="YES" id="qKq-LF-a71"/>
+                                                <constraint firstItem="tkd-LW-UwZ" firstAttribute="leading" secondItem="hsJ-2b-cZd" secondAttribute="trailing" constant="85" id="xPq-H5-i4v"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="393" height="262"/>
                                         <connections>
                                             <outlet property="ingredientsLabel" destination="Dsc-ig-pf1" id="eeS-oj-EeZ"/>
                                             <outlet property="instructionsLabel" destination="dhB-M0-UiN" id="Tix-K7-gcH"/>
                                             <outlet property="mealImageView" destination="lQK-0k-dHj" id="NS0-3k-gG0"/>
+                                            <outlet property="recipeNameLabel" destination="hsJ-2b-cZd" id="v8z-hn-Kbw"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search by Recipe Name" translatesAutoresizingMaskIntoConstraints="NO" id="Nu2-mN-1G8">
+                            <searchBar contentMode="redraw" placeholder="Search by Recipe Name" translatesAutoresizingMaskIntoConstraints="NO" id="Nu2-mN-1G8">
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Okc-gO-S6k"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="7cm-D4-Bbb" id="BCh-gU-JxZ"/>
@@ -580,9 +601,19 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5M3-Mj-qSJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="SJH-F4-jxD" secondAttribute="bottom" constant="-83" id="0rU-dO-R6Q"/>
+                            <constraint firstItem="Nu2-mN-1G8" firstAttribute="top" secondItem="5M3-Mj-qSJ" secondAttribute="top" id="1zN-cC-hxe"/>
+                            <constraint firstItem="Nu2-mN-1G8" firstAttribute="leading" secondItem="SJH-F4-jxD" secondAttribute="leading" id="4kE-Jo-uJK"/>
+                            <constraint firstItem="SJH-F4-jxD" firstAttribute="leading" secondItem="5M3-Mj-qSJ" secondAttribute="leading" id="8dX-GP-g69"/>
+                            <constraint firstItem="SJH-F4-jxD" firstAttribute="trailing" secondItem="5M3-Mj-qSJ" secondAttribute="trailing" id="hNU-7L-kw1"/>
+                            <constraint firstItem="SJH-F4-jxD" firstAttribute="top" secondItem="Nu2-mN-1G8" secondAttribute="bottom" id="lZd-62-Ff1"/>
+                            <constraint firstItem="Nu2-mN-1G8" firstAttribute="trailing" secondItem="SJH-F4-jxD" secondAttribute="trailing" id="ua9-GF-HZW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Meal DB" image="doc.text" catalog="system" selectedImage="doc.text.fill" id="0SC-4H-W0T"/>
                     <connections>
+                        <outlet property="mealDBCollectionView" destination="SJH-F4-jxD" id="GFP-1J-l6X"/>
                         <outlet property="mealDBSearchBar" destination="Nu2-mN-1G8" id="Oh3-nW-Im0"/>
                     </connections>
                 </viewController>

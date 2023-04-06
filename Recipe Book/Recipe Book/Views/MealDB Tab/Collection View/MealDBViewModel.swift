@@ -4,7 +4,7 @@
 //
 //  Created by Chase on 3/30/23.
 //
-import Foundation
+import UIKit
 
 protocol MealDBViewModelDelegate: MealDBViewController {
     // Note: - Need to inform the ViewController to update the views when the fetch is done
@@ -16,16 +16,17 @@ class MealDBViewModel {
     
     // MARK: - Properties
     var mealDB: MealDBTopLevelDictionary?
+    var recipe: MealDBRecipe?
     var meals: [MealDBRecipe] = []
-    let service: MealService // Note: - This is a concrete type
+    private var service: MealServiceable // Note: - This is a concrete type
     private weak var delegate: MealDBViewModelDelegate?
     
     // Note: - Dependancy Injection
-    init(delegate: MealDBViewModelDelegate, service: MealService = MealService()) {
+    init(delegate: MealDBViewModelDelegate, service: MealServiceable = MealService()) {
         self.delegate = delegate
         self.service = service
     }
-    
+
     // MARK: - Functions
     func fetchRecipes(searchTerm: String) {
         service.fetchMealsByName(searchTerm: searchTerm) { result in

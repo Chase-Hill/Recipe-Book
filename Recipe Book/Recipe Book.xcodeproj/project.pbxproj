@@ -46,6 +46,7 @@
 		AFC1508329D4A156003A1699 /* MealDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1508229D4A156003A1699 /* MealDB.swift */; };
 		AFCA193229DC80C9006C9A67 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA193129DC80C9006C9A67 /* Constants.swift */; };
 		AFCA193429DCBAD6006C9A67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFCA193329DCBAD6006C9A67 /* GoogleService-Info.plist */; };
+		AFCA193A29DE3BE9006C9A67 /* ServiceRequestingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA193929DE3BE9006C9A67 /* ServiceRequestingImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		AFC1508229D4A156003A1699 /* MealDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDB.swift; sourceTree = "<group>"; };
 		AFCA193129DC80C9006C9A67 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AFCA193329DCBAD6006C9A67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AFCA193929DE3BE9006C9A67 /* ServiceRequestingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestingImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 		AF42647B29DB3ECE004852E1 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
+				AFCA193929DE3BE9006C9A67 /* ServiceRequestingImageView.swift */,
 				AF42647929DB3EC8004852E1 /* FirebaseService.swift */,
 				AF42647C29DB40A1004852E1 /* NetworkErrors.swift */,
 				AF42648029DB4866004852E1 /* MealService.swift */,
@@ -400,6 +403,7 @@
 				AF42648129DB4866004852E1 /* MealService.swift in Sources */,
 				AF41A35F29D63C5A000CC40A /* SignUpViewModel.swift in Sources */,
 				AF41A34B29D633D7000CC40A /* FavoritesInstructionsViewController.swift in Sources */,
+				AFCA193A29DE3BE9006C9A67 /* ServiceRequestingImageView.swift in Sources */,
 				AF41A35029D63417000CC40A /* FavoritesCollectionViewController.swift in Sources */,
 				AF41A34729D6338B000CC40A /* MealDBInstructionsViewController.swift in Sources */,
 				AFC1506E29D49134003A1699 /* AppDelegate.swift in Sources */,
