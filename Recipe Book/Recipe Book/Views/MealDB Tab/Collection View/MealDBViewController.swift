@@ -45,13 +45,11 @@ extension MealDBViewController: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recipeCell", for: indexPath) as? MealDBCollectionViewCell else { return UICollectionViewCell() }
         let recipe = viewModel.meals[indexPath.item]
-        cell.configUI(with: recipe)
-        cell.fetchImage(with: recipe)
+        cell.viewModel = MealDBCollectionViewCellViewModel(recipe: recipe, delegate: cell)
         
         let instructionsTapGesture = UITapGestureRecognizer(target: self, action: #selector(instructionsLabelTapped(_:)))
-        let ingredientsTapGesture = UITapGestureRecognizer(target: self, action: #selector(ingredientsLabelTapped(_:)))
+        //        let ingredientsTapGesture = UITapGestureRecognizer(target: self, action: #selector(ingredientsLabelTapped(_:)))
         cell.mealDBInstructionsLabel.addGestureRecognizer(instructionsTapGesture)
-        cell.mealDBIngredientsLabel.addGestureRecognizer(ingredientsTapGesture)
         
         return cell
     }
@@ -59,16 +57,6 @@ extension MealDBViewController: UICollectionViewDataSource, UICollectionViewDele
     @objc func instructionsLabelTapped(_ sender: UITapGestureRecognizer) {
         guard let modalViewController = self.storyboard?.instantiateViewController(withIdentifier: "instructionsModal") else { return }
         self.present(modalViewController, animated: true, completion: nil)
-    }
-    
-    @objc func ingredientsLabelTapped(_ sender: UITapGestureRecognizer) {
-        guard let mealTableViewController = storyboard?.instantiateViewController(withIdentifier: "ingredientsModal") as? MealDBIngredientsTableViewController,
-              let recipe = viewModel.recipe else { return }
-        mealTableViewController.viewModel = MealDBIngredientsViewModel(recipe: recipe, delegate: mealTableViewController)
-        self.present(mealTableViewController, animated: true)
-//        guard let mealTableViewController = mealDBCollectionView.delegate as? MealDBIngredientsTableViewController else { return }
-//        guard let modalViewController = viewController.storyboard?.instantiateViewController(withIdentifier: "ingredientsModal") else { return }
-//        viewController.present(modalViewController, animated: true, completion: nil)
     }
 }
 
