@@ -16,7 +16,6 @@ class MealDBViewModel {
     
     // MARK: - Properties
     var mealDB: MealDBTopLevelDictionary?
-    var recipe: MealDBRecipe?
     var meals: [MealDBRecipe] = []
     private var service: MealServiceable // Note: - This is a concrete type
     private weak var delegate: MealDBViewModelDelegate?

@@ -12,6 +12,9 @@ class MealDBCollectionViewCell: UICollectionViewCell {
     // MARK: - Outlets
     @IBOutlet weak var mealImageView: ServiceRequestingImageView!
     @IBOutlet weak var recipeNameLabel: UILabel!
+    @IBOutlet weak var mealDBInstructionsLabel: UILabel!
+    @IBOutlet weak var mealDBIngredientsLabel: UILabel!
+    
     
     // MARK: - Actions
     @IBAction func bookmarkButtonTapped(_ sender: Any) {
@@ -26,8 +29,6 @@ class MealDBCollectionViewCell: UICollectionViewCell {
     }
     
     func configUI(with recipe: MealDBRecipe) {
-        DispatchQueue.main.async {
-            self.recipeNameLabel.text = recipe.mealName
-        }
+        recipeNameLabel.text = recipe.mealName
     }
 }
