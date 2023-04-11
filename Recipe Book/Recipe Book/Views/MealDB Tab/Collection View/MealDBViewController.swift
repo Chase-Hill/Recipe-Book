@@ -11,23 +11,49 @@ class MealDBViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var mealDBSearchBar: UISearchBar!
+    @IBOutlet weak var mealDBCollectionView: UICollectionView!
+    
+    // MARK: - Properties
+    var viewModel: MealDBViewModel!
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        mealDBSearchBar.delegate = self
+        mealDBCollectionView.dataSource = self
+        mealDBCollectionView.delegate = self
+        viewModel = MealDBViewModel(delegate: self)
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+    }
+}
 
-        // Do any additional setup after loading the view.
+// MARK: - Extensions
+extension MealDBViewController: MealDBViewModelDelegate {
+    func updateViews() {
+        DispatchQueue.main.async {
+            self.mealDBCollectionView.reloadData()
+        }
+    }
+}
+
+extension MealDBViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.meals.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recipeCell", for: indexPath) as? MealDBCollectionViewCell else { return UICollectionViewCell() }
+        let recipe = viewModel.meals[indexPath.item]
+        cell.viewModel = MealDBCollectionViewCellViewModel(recipe: recipe, delegate: cell)
+        
+        return cell
     }
-    */
+}
 
+extension MealDBViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchTerm = searchBar.text, !searchTerm.isEmpty else { return }
+        viewModel.fetchRecipes(searchTerm: searchTerm)
+    }
 }

@@ -15,8 +15,6 @@ struct MealDBRecipe: Decodable {
     private enum CodingKeys: String, CodingKey {
         case mealID = "idMeal"
         case mealName = "strMeal"
-        case category = "strCategory"
-        case areaOfOrigin = "strArea"
         case instructions = "strInstructions"
         case imageURL = "strMealThumb"
         case ingredients
@@ -24,8 +22,6 @@ struct MealDBRecipe: Decodable {
     
     let mealID: String?
     let mealName: String?
-    let category: String?
-    let areaOfOrigin: String?
     let instructions: String?
     let imageURL: String?
     let ingredients: [Ingredient]
@@ -52,8 +48,6 @@ extension MealDBRecipe {
         let container = try? decoder.container(keyedBy: CodingKeys.self)
         self.mealID = try? container?.decode(String.self, forKey: .mealID)
         self.mealName = try? container?.decode(String.self, forKey: .mealName)
-        self.category = try? container?.decode(String.self, forKey: .category)
-        self.areaOfOrigin = try? container?.decode(String.self, forKey: .areaOfOrigin)
         self.instructions = try? container?.decode(String.self, forKey: .instructions)
         self.imageURL = try? container?.decode(String.self, forKey: .imageURL)
         

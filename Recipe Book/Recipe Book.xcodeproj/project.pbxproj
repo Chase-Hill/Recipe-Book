@@ -11,9 +11,7 @@
 		AF41A33E29D632C5000CC40A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A33D29D632C5000CC40A /* SignInViewController.swift */; };
 		AF41A34229D63300000CC40A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A34129D63300000CC40A /* SignUpViewController.swift */; };
 		AF41A34729D6338B000CC40A /* MealDBInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A34629D6338B000CC40A /* MealDBInstructionsViewController.swift */; };
-		AF41A34929D63398000CC40A /* MealDBIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A34829D63398000CC40A /* MealDBIngredientsViewController.swift */; };
 		AF41A34B29D633D7000CC40A /* FavoritesInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A34A29D633D7000CC40A /* FavoritesInstructionsViewController.swift */; };
-		AF41A34E29D633ED000CC40A /* FavoritesIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A34D29D633ED000CC40A /* FavoritesIngredientsViewController.swift */; };
 		AF41A35029D63417000CC40A /* FavoritesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A34F29D63417000CC40A /* FavoritesCollectionViewController.swift */; };
 		AF41A35229D634BC000CC40A /* UserRecipesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A35129D634BC000CC40A /* UserRecipesCollectionViewController.swift */; };
 		AF41A35529D634E7000CC40A /* UserRecipeInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A35429D634E7000CC40A /* UserRecipeInstructionsViewController.swift */; };
@@ -25,18 +23,33 @@
 		AF41A36729D63CEC000CC40A /* UserRecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A36629D63CEC000CC40A /* UserRecipesViewModel.swift */; };
 		AF41A36B29D63DED000CC40A /* MealDBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A36A29D63DED000CC40A /* MealDBViewModel.swift */; };
 		AF41A36E29D63E41000CC40A /* CreateRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A36D29D63E41000CC40A /* CreateRecipeViewModel.swift */; };
-		AF41A37029D644D7000CC40A /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = AF41A36F29D644D7000CC40A /* GoogleService-Info (2).plist */; };
 		AF41A37329D645B2000CC40A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AF41A37229D645B2000CC40A /* FirebaseAuth */; };
 		AF41A37529D645B2000CC40A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AF41A37429D645B2000CC40A /* FirebaseFirestore */; };
 		AF41A37729D645B2000CC40A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AF41A37629D645B2000CC40A /* FirebaseStorage */; };
 		AF41A37929D648DB000CC40A /* MealDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A37829D648DB000CC40A /* MealDBViewController.swift */; };
 		AF41A37B29D648F1000CC40A /* MealDBCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A37A29D648F1000CC40A /* MealDBCollectionViewCell.swift */; };
+		AF41A37D29D66F27000CC40A /* FavoritesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A37C29D66F27000CC40A /* FavoritesCollectionViewCell.swift */; };
+		AF41A37F29D67057000CC40A /* UserCreatedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A37E29D67057000CC40A /* UserCreatedCollectionViewCell.swift */; };
+		AF41A38129D671A2000CC40A /* IngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A38029D671A2000CC40A /* IngredientsTableViewCell.swift */; };
+		AF42647A29DB3EC8004852E1 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42647929DB3EC8004852E1 /* FirebaseService.swift */; };
+		AF42647D29DB40A1004852E1 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42647C29DB40A1004852E1 /* NetworkErrors.swift */; };
+		AF42647F29DB485A004852E1 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42647E29DB485A004852E1 /* APIService.swift */; };
+		AF42648129DB4866004852E1 /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42648029DB4866004852E1 /* MealService.swift */; };
+		AF42648329DB7293004852E1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42648229DB7293004852E1 /* Meal.swift */; };
 		AFC1506E29D49134003A1699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1506D29D49134003A1699 /* AppDelegate.swift */; };
 		AFC1507029D49134003A1699 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1506F29D49134003A1699 /* SceneDelegate.swift */; };
 		AFC1507529D49134003A1699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC1507329D49134003A1699 /* Main.storyboard */; };
 		AFC1507729D49135003A1699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC1507629D49135003A1699 /* Assets.xcassets */; };
 		AFC1507A29D49135003A1699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC1507829D49135003A1699 /* LaunchScreen.storyboard */; };
 		AFC1508329D4A156003A1699 /* MealDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1508229D4A156003A1699 /* MealDB.swift */; };
+		AFCA193229DC80C9006C9A67 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA193129DC80C9006C9A67 /* Constants.swift */; };
+		AFCA193429DCBAD6006C9A67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFCA193329DCBAD6006C9A67 /* GoogleService-Info.plist */; };
+		AFCA193A29DE3BE9006C9A67 /* ServiceRequestingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA193929DE3BE9006C9A67 /* ServiceRequestingImageView.swift */; };
+		AFCA193C29E47725006C9A67 /* MealDBIngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA193B29E47725006C9A67 /* MealDBIngredientsTableViewController.swift */; };
+		AFCA194029E47C39006C9A67 /* MealDBIngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA193F29E47C39006C9A67 /* MealDBIngredientsViewModel.swift */; };
+		AFCA194229E49647006C9A67 /* MealDBCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194129E49647006C9A67 /* MealDBCollectionViewCellViewModel.swift */; };
+		AFCA194429E4AC65006C9A67 /* MealDBInstructionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194329E4AC65006C9A67 /* MealDBInstructionsViewModel.swift */; };
+		AFCA194629E5A633006C9A67 /* FavoritesIngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194529E5A633006C9A67 /* FavoritesIngredientsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,9 +57,7 @@
 		AF41A33D29D632C5000CC40A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		AF41A34129D63300000CC40A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		AF41A34629D6338B000CC40A /* MealDBInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBInstructionsViewController.swift; sourceTree = "<group>"; };
-		AF41A34829D63398000CC40A /* MealDBIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBIngredientsViewController.swift; sourceTree = "<group>"; };
 		AF41A34A29D633D7000CC40A /* FavoritesInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInstructionsViewController.swift; sourceTree = "<group>"; };
-		AF41A34D29D633ED000CC40A /* FavoritesIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesIngredientsViewController.swift; sourceTree = "<group>"; };
 		AF41A34F29D63417000CC40A /* FavoritesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewController.swift; sourceTree = "<group>"; };
 		AF41A35129D634BC000CC40A /* UserRecipesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipesCollectionViewController.swift; sourceTree = "<group>"; };
 		AF41A35429D634E7000CC40A /* UserRecipeInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeInstructionsViewController.swift; sourceTree = "<group>"; };
@@ -58,9 +69,16 @@
 		AF41A36629D63CEC000CC40A /* UserRecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipesViewModel.swift; sourceTree = "<group>"; };
 		AF41A36A29D63DED000CC40A /* MealDBViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBViewModel.swift; sourceTree = "<group>"; };
 		AF41A36D29D63E41000CC40A /* CreateRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecipeViewModel.swift; sourceTree = "<group>"; };
-		AF41A36F29D644D7000CC40A /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info (2).plist"; path = "../../../../../Downloads/GoogleService-Info (2).plist"; sourceTree = "<group>"; };
 		AF41A37829D648DB000CC40A /* MealDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBViewController.swift; sourceTree = "<group>"; };
 		AF41A37A29D648F1000CC40A /* MealDBCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBCollectionViewCell.swift; sourceTree = "<group>"; };
+		AF41A37C29D66F27000CC40A /* FavoritesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewCell.swift; sourceTree = "<group>"; };
+		AF41A37E29D67057000CC40A /* UserCreatedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreatedCollectionViewCell.swift; sourceTree = "<group>"; };
+		AF41A38029D671A2000CC40A /* IngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCell.swift; sourceTree = "<group>"; };
+		AF42647929DB3EC8004852E1 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		AF42647C29DB40A1004852E1 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		AF42647E29DB485A004852E1 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		AF42648029DB4866004852E1 /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
+		AF42648229DB7293004852E1 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		AFC1506A29D49134003A1699 /* Recipe Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC1506D29D49134003A1699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFC1506F29D49134003A1699 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +87,14 @@
 		AFC1507929D49135003A1699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFC1507B29D49135003A1699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFC1508229D4A156003A1699 /* MealDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDB.swift; sourceTree = "<group>"; };
+		AFCA193129DC80C9006C9A67 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AFCA193329DCBAD6006C9A67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AFCA193929DE3BE9006C9A67 /* ServiceRequestingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestingImageView.swift; sourceTree = "<group>"; };
+		AFCA193B29E47725006C9A67 /* MealDBIngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBIngredientsTableViewController.swift; sourceTree = "<group>"; };
+		AFCA193F29E47C39006C9A67 /* MealDBIngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBIngredientsViewModel.swift; sourceTree = "<group>"; };
+		AFCA194129E49647006C9A67 /* MealDBCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		AFCA194329E4AC65006C9A67 /* MealDBInstructionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBInstructionsViewModel.swift; sourceTree = "<group>"; };
+		AFCA194529E5A633006C9A67 /* FavoritesIngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesIngredientsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				AF41A35829D63513000CC40A /* CreateRecipeViewController.swift */,
+				AF41A38029D671A2000CC40A /* IngredientsTableViewCell.swift */,
 				AF41A36D29D63E41000CC40A /* CreateRecipeViewModel.swift */,
 			);
 			path = CreateRecipe;
@@ -183,8 +210,9 @@
 		AF41A36129D63C9E000CC40A /* Collection View */ = {
 			isa = PBXGroup;
 			children = (
-				AF41A34F29D63417000CC40A /* FavoritesCollectionViewController.swift */,
 				AF41A36229D63CBA000CC40A /* FavoritesViewModel.swift */,
+				AF41A34F29D63417000CC40A /* FavoritesCollectionViewController.swift */,
+				AF41A37C29D66F27000CC40A /* FavoritesCollectionViewCell.swift */,
 			);
 			path = "Collection View";
 			sourceTree = "<group>";
@@ -193,7 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				AF41A34A29D633D7000CC40A /* FavoritesInstructionsViewController.swift */,
-				AF41A34D29D633ED000CC40A /* FavoritesIngredientsViewController.swift */,
+				AFCA194529E5A633006C9A67 /* FavoritesIngredientsTableViewController.swift */,
 			);
 			path = "Favorites Pop-ups";
 			sourceTree = "<group>";
@@ -202,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				AF41A35129D634BC000CC40A /* UserRecipesCollectionViewController.swift */,
+				AF41A37E29D67057000CC40A /* UserCreatedCollectionViewCell.swift */,
 				AF41A36629D63CEC000CC40A /* UserRecipesViewModel.swift */,
 			);
 			path = "Collection View";
@@ -219,9 +248,10 @@
 		AF41A36929D63D06000CC40A /* Collection View */ = {
 			isa = PBXGroup;
 			children = (
-				AF41A37829D648DB000CC40A /* MealDBViewController.swift */,
 				AF41A36A29D63DED000CC40A /* MealDBViewModel.swift */,
+				AF41A37829D648DB000CC40A /* MealDBViewController.swift */,
 				AF41A37A29D648F1000CC40A /* MealDBCollectionViewCell.swift */,
+				AFCA194129E49647006C9A67 /* MealDBCollectionViewCellViewModel.swift */,
 			);
 			path = "Collection View";
 			sourceTree = "<group>";
@@ -229,10 +259,25 @@
 		AF41A36C29D63E1D000CC40A /* MealDB Pop-ups */ = {
 			isa = PBXGroup;
 			children = (
+				AFCA193F29E47C39006C9A67 /* MealDBIngredientsViewModel.swift */,
+				AFCA194329E4AC65006C9A67 /* MealDBInstructionsViewModel.swift */,
 				AF41A34629D6338B000CC40A /* MealDBInstructionsViewController.swift */,
-				AF41A34829D63398000CC40A /* MealDBIngredientsViewController.swift */,
+				AFCA193B29E47725006C9A67 /* MealDBIngredientsTableViewController.swift */,
 			);
 			path = "MealDB Pop-ups";
+			sourceTree = "<group>";
+		};
+		AF42647B29DB3ECE004852E1 /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFCA193929DE3BE9006C9A67 /* ServiceRequestingImageView.swift */,
+				AF42647929DB3EC8004852E1 /* FirebaseService.swift */,
+				AF42647C29DB40A1004852E1 /* NetworkErrors.swift */,
+				AF42648029DB4866004852E1 /* MealService.swift */,
+				AF42647E29DB485A004852E1 /* APIService.swift */,
+				AFCA193129DC80C9006C9A67 /* Constants.swift */,
+			);
+			path = "Helper Files";
 			sourceTree = "<group>";
 		};
 		AFC1506129D49134003A1699 = {
@@ -254,8 +299,9 @@
 		AFC1506C29D49134003A1699 /* Recipe Book */ = {
 			isa = PBXGroup;
 			children = (
-				AF41A36F29D644D7000CC40A /* GoogleService-Info (2).plist */,
+				AFCA193329DCBAD6006C9A67 /* GoogleService-Info.plist */,
 				AF41A33C29D625C3000CC40A /* Supporting Files */,
+				AF42647B29DB3ECE004852E1 /* Helper Files */,
 				AF41A33B29D62597000CC40A /* Storyboard */,
 				AFC1508129D4A146003A1699 /* Models */,
 				AF41A33F29D632CC000CC40A /* Views */,
@@ -266,8 +312,9 @@
 		AFC1508129D4A146003A1699 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AFC1508229D4A156003A1699 /* MealDB.swift */,
 				AF41A33929D620BE000CC40A /* Recipe.swift */,
+				AFC1508229D4A156003A1699 /* MealDB.swift */,
+				AF42648229DB7293004852E1 /* Meal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -338,8 +385,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF41A37029D644D7000CC40A /* GoogleService-Info (2).plist in Resources */,
 				AFC1507A29D49135003A1699 /* LaunchScreen.storyboard in Resources */,
+				AFCA193429DCBAD6006C9A67 /* GoogleService-Info.plist in Resources */,
 				AFC1507729D49135003A1699 /* Assets.xcassets in Resources */,
 				AFC1507529D49134003A1699 /* Main.storyboard in Resources */,
 			);
@@ -354,27 +401,40 @@
 			files = (
 				AF41A34229D63300000CC40A /* SignUpViewController.swift in Sources */,
 				AF41A36B29D63DED000CC40A /* MealDBViewModel.swift in Sources */,
+				AFCA194629E5A633006C9A67 /* FavoritesIngredientsTableViewController.swift in Sources */,
+				AF42647F29DB485A004852E1 /* APIService.swift in Sources */,
+				AF41A37D29D66F27000CC40A /* FavoritesCollectionViewCell.swift in Sources */,
 				AFC1508329D4A156003A1699 /* MealDB.swift in Sources */,
 				AF41A35529D634E7000CC40A /* UserRecipeInstructionsViewController.swift in Sources */,
 				AF41A37B29D648F1000CC40A /* MealDBCollectionViewCell.swift in Sources */,
-				AF41A34929D63398000CC40A /* MealDBIngredientsViewController.swift in Sources */,
+				AFCA193229DC80C9006C9A67 /* Constants.swift in Sources */,
+				AF42648329DB7293004852E1 /* Meal.swift in Sources */,
+				AF42648129DB4866004852E1 /* MealService.swift in Sources */,
+				AFCA194429E4AC65006C9A67 /* MealDBInstructionsViewModel.swift in Sources */,
 				AF41A35F29D63C5A000CC40A /* SignUpViewModel.swift in Sources */,
 				AF41A34B29D633D7000CC40A /* FavoritesInstructionsViewController.swift in Sources */,
+				AFCA193A29DE3BE9006C9A67 /* ServiceRequestingImageView.swift in Sources */,
 				AF41A35029D63417000CC40A /* FavoritesCollectionViewController.swift in Sources */,
+				AFCA194229E49647006C9A67 /* MealDBCollectionViewCellViewModel.swift in Sources */,
 				AF41A34729D6338B000CC40A /* MealDBInstructionsViewController.swift in Sources */,
 				AFC1506E29D49134003A1699 /* AppDelegate.swift in Sources */,
+				AFCA193C29E47725006C9A67 /* MealDBIngredientsTableViewController.swift in Sources */,
 				AF41A33A29D620BE000CC40A /* Recipe.swift in Sources */,
+				AF42647A29DB3EC8004852E1 /* FirebaseService.swift in Sources */,
 				AF41A35D29D63C4F000CC40A /* SignInViewModel.swift in Sources */,
-				AF41A34E29D633ED000CC40A /* FavoritesIngredientsViewController.swift in Sources */,
 				AF41A33E29D632C5000CC40A /* SignInViewController.swift in Sources */,
+				AF42647D29DB40A1004852E1 /* NetworkErrors.swift in Sources */,
 				AF41A35929D63513000CC40A /* CreateRecipeViewController.swift in Sources */,
 				AF41A37929D648DB000CC40A /* MealDBViewController.swift in Sources */,
 				AF41A35229D634BC000CC40A /* UserRecipesCollectionViewController.swift in Sources */,
 				AFC1507029D49134003A1699 /* SceneDelegate.swift in Sources */,
+				AF41A38129D671A2000CC40A /* IngredientsTableViewCell.swift in Sources */,
 				AF41A36E29D63E41000CC40A /* CreateRecipeViewModel.swift in Sources */,
 				AF41A35729D634F4000CC40A /* UserRecipeIngredientsViewController.swift in Sources */,
 				AF41A36329D63CBA000CC40A /* FavoritesViewModel.swift in Sources */,
 				AF41A36729D63CEC000CC40A /* UserRecipesViewModel.swift in Sources */,
+				AFCA194029E47C39006C9A67 /* MealDBIngredientsViewModel.swift in Sources */,
+				AF41A37F29D67057000CC40A /* UserCreatedCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,8 +586,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -553,8 +613,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

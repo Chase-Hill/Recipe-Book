@@ -9,6 +9,10 @@ import UIKit
 
 class FavoritesInstructionsViewController: UIViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var favoritesInstructionsTextView: UITextView!
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -15,6 +15,7 @@ class Recipe {
         static let ingredients = "ingredients"
         static let image = "image"
         static let uuid = "uuid"
+        static let collection = "recipes"
     }
     
     var user: String
