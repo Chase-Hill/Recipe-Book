@@ -12,8 +12,7 @@ class MealDBCollectionViewCell: UICollectionViewCell {
     // MARK: - Outlets
     @IBOutlet weak var mealImageView: ServiceRequestingImageView!
     @IBOutlet weak var recipeNameLabel: UILabel!
-    @IBOutlet weak var mealDBInstructionsLabel: UILabel!
-
+    
     // MARK: - Properties
     var viewModel: MealDBCollectionViewCellViewModel!
     
@@ -26,12 +25,23 @@ class MealDBCollectionViewCell: UICollectionViewCell {
         presentIngredients()
     }
     
+    @IBAction func instructionsButtonTapped(_ sender: Any) {
+        presentInstructions()
+    }
+    
     // MARK: - Functions
     func presentIngredients() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let mealTableViewController = storyboard.instantiateViewController(withIdentifier: "ingredientsModal") as? MealDBIngredientsTableViewController else { return }
         mealTableViewController.viewModel = MealDBIngredientsViewModel(recipe: viewModel.recipe, delegate: mealTableViewController)
         self.window?.rootViewController?.present(mealTableViewController, animated: true)
+    }
+    
+    func presentInstructions() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let mealInstructionsView = storyboard.instantiateViewController(withIdentifier: "instructionsModal") as? MealDBInstructionsViewController else { return }
+        mealInstructionsView.viewModel = MealDBInstructionsViewModel(recipe: viewModel.recipe, delegate: mealInstructionsView)
+        self.window?.rootViewController?.present(mealInstructionsView, animated: true)
     }
 }
 

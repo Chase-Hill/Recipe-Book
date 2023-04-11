@@ -15,6 +15,7 @@ class MealDBIngredientsTableViewController: UITableViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews()
     }
 
     // MARK: - Table view data source
@@ -37,8 +38,6 @@ class MealDBIngredientsTableViewController: UITableViewController {
 
 extension MealDBIngredientsTableViewController: MealDBIngredientsViewModelDelegate {
     func updateViews() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+            tableView.reloadData()
     }
 }

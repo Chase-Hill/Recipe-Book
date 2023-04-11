@@ -49,6 +49,7 @@
 		AFCA193C29E47725006C9A67 /* MealDBIngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA193B29E47725006C9A67 /* MealDBIngredientsTableViewController.swift */; };
 		AFCA194029E47C39006C9A67 /* MealDBIngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA193F29E47C39006C9A67 /* MealDBIngredientsViewModel.swift */; };
 		AFCA194229E49647006C9A67 /* MealDBCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194129E49647006C9A67 /* MealDBCollectionViewCellViewModel.swift */; };
+		AFCA194429E4AC65006C9A67 /* MealDBInstructionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194329E4AC65006C9A67 /* MealDBInstructionsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		AFCA193B29E47725006C9A67 /* MealDBIngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBIngredientsTableViewController.swift; sourceTree = "<group>"; };
 		AFCA193F29E47C39006C9A67 /* MealDBIngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBIngredientsViewModel.swift; sourceTree = "<group>"; };
 		AFCA194129E49647006C9A67 /* MealDBCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		AFCA194329E4AC65006C9A67 /* MealDBInstructionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBInstructionsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				AFCA193F29E47C39006C9A67 /* MealDBIngredientsViewModel.swift */,
+				AFCA194329E4AC65006C9A67 /* MealDBInstructionsViewModel.swift */,
 				AF41A34629D6338B000CC40A /* MealDBInstructionsViewController.swift */,
 				AFCA193B29E47725006C9A67 /* MealDBIngredientsTableViewController.swift */,
 			);
@@ -406,6 +409,7 @@
 				AFCA193229DC80C9006C9A67 /* Constants.swift in Sources */,
 				AF42648329DB7293004852E1 /* Meal.swift in Sources */,
 				AF42648129DB4866004852E1 /* MealService.swift in Sources */,
+				AFCA194429E4AC65006C9A67 /* MealDBInstructionsViewModel.swift in Sources */,
 				AF41A35F29D63C5A000CC40A /* SignUpViewModel.swift in Sources */,
 				AF41A34B29D633D7000CC40A /* FavoritesInstructionsViewController.swift in Sources */,
 				AFCA193A29DE3BE9006C9A67 /* ServiceRequestingImageView.swift in Sources */,

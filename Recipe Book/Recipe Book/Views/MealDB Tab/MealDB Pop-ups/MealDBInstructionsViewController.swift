@@ -13,19 +13,17 @@ class MealDBInstructionsViewController: UIViewController {
     @IBOutlet weak var mealDBInstructionsTextView: UITextView!
     
     // MARK: - Properties
-    var recipe: MealDBRecipe?
+    var viewModel: MealDBInstructionsViewModel!
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI()
+        updateViews()
     }
-    
-    // MARK: - Functions
-    func updateUI() {
-        DispatchQueue.main.async {
-            guard let instructions = self.recipe?.instructions else { return }
-            self.mealDBInstructionsTextView.text = instructions
-        }
+}
+
+extension MealDBInstructionsViewController: MealDBInstructionsViewModelDelegate {
+    func updateViews() {
+            mealDBInstructionsTextView.text = viewModel.recipe.instructions
     }
 }

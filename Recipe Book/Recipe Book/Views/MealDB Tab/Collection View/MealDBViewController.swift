@@ -47,16 +47,7 @@ extension MealDBViewController: UICollectionViewDataSource, UICollectionViewDele
         let recipe = viewModel.meals[indexPath.item]
         cell.viewModel = MealDBCollectionViewCellViewModel(recipe: recipe, delegate: cell)
         
-        let instructionsTapGesture = UITapGestureRecognizer(target: self, action: #selector(instructionsLabelTapped(_:)))
-        //        let ingredientsTapGesture = UITapGestureRecognizer(target: self, action: #selector(ingredientsLabelTapped(_:)))
-        cell.mealDBInstructionsLabel.addGestureRecognizer(instructionsTapGesture)
-        
         return cell
-    }
-    
-    @objc func instructionsLabelTapped(_ sender: UITapGestureRecognizer) {
-        guard let modalViewController = self.storyboard?.instantiateViewController(withIdentifier: "instructionsModal") else { return }
-        self.present(modalViewController, animated: true, completion: nil)
     }
 }
 

@@ -560,24 +560,26 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="cp4-Qt-byJ">
-                                                    <rect key="frame" x="59.333333333333343" y="190.66666666666666" width="274.66666666666663" height="34.333333333333343"/>
+                                                    <rect key="frame" x="55" y="190.66666666666666" width="283.33333333333331" height="34.333333333333343"/>
                                                     <subviews>
-                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhB-M0-UiN">
-                                                            <rect key="frame" x="0.0" y="0.0" width="109.33333333333333" height="34.333333333333336"/>
-                                                            <gestureRecognizers/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzE-31-jmk">
+                                                            <rect key="frame" x="0.0" y="0.0" width="113.66666666666667" height="34.333333333333336"/>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="Instructions"/>
                                                             <connections>
-                                                                <outletCollection property="gestureRecognizers" destination="9vE-xG-FFs" appends="YES" id="RKK-Nc-SeC"/>
+                                                                <action selector="instructionsButtonTapped:" destination="6F9-yJ-yaV" eventType="touchUpInside" id="xgm-v5-cPy"/>
+                                                                <segue destination="HNm-vp-Qgx" kind="presentation" id="QTv-zZ-g62"/>
                                                             </connections>
-                                                        </label>
+                                                        </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBj-lT-ii1">
-                                                            <rect key="frame" x="165.33333333333331" y="0.0" width="109.33333333333331" height="34.333333333333336"/>
+                                                            <rect key="frame" x="169.66666666666666" y="0.0" width="113.66666666666666" height="34.333333333333336"/>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" title="Ingredients"/>
                                                             <connections>
                                                                 <action selector="ingredientsButtonTapped:" destination="6F9-yJ-yaV" eventType="touchUpInside" id="cpI-58-aai"/>
+                                                                <segue destination="ceG-z8-Du9" kind="presentation" id="9bp-h2-DBM"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -597,7 +599,6 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="393" height="262"/>
                                         <connections>
-                                            <outlet property="mealDBInstructionsLabel" destination="dhB-M0-UiN" id="KM8-V4-QPw"/>
                                             <outlet property="mealImageView" destination="lQK-0k-dHj" id="NS0-3k-gG0"/>
                                             <outlet property="recipeNameLabel" destination="hsJ-2b-cZd" id="v8z-hn-Kbw"/>
                                         </connections>
@@ -634,16 +635,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCr-Lg-Shi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="9vE-xG-FFs">
-                    <connections>
-                        <segue destination="HNm-vp-Qgx" kind="show" id="nh4-YL-OtF"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="Jb0-3n-sKx">
-                    <connections>
-                        <segue destination="ceG-z8-Du9" kind="presentation" id="Spc-yQ-sNw"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2890.8396946564885" y="-608.45070422535218"/>
         </scene>
