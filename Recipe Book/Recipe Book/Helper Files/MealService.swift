@@ -49,9 +49,9 @@ struct MealService: MealServiceable {
     }
     
     #warning("Finish once I have everything else completed")
-//    func fetchMealsByIngredients(searchTerm: String, completion: @escaping(Result <[],>) -> Void) {
-//
-//    }
+    func fetchMealsByIngredients(searchTerm: String, completion: @escaping(Result <[MealDBRecipe], NetworkError>) -> Void) {
+
+    }
     
     func fetchImage(imageString: String, completion: @escaping (Result <UIImage, NetworkError>) -> Void) {
         guard let imageURL = URL(string: imageString) else { completion(.failure(.invalidURL)) ; return }

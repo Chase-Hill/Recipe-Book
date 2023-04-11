@@ -18,7 +18,7 @@ class MealDBCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Actions
     @IBAction func bookmarkButtonTapped(_ sender: Any) {
-        
+        #warning("Finish code here once funishing up Favorites folder.")
     }
     
     @IBAction func ingredientsButtonTapped(_ sender: Any) {

@@ -20,17 +20,4 @@ struct FirebaseService {
         
         let uuid = UUID().uuidString
     }
-    
-//    func loadRecipes(completion: @escaping (Result <[Recipe], NetworkError>) -> Void) {
-//        ref.collection(Recipe.Key.collection).getDocuments { snapshot, error in
-//            if let error = error {
-//                print(error.localizedDescription)
-//                completion(.failure(.thrownError(error)))
-//            }
-//
-//            guard let docSnapshot = snapshot?.documents else { completion(.failure(.noData)) ; return }
-//            let dictionaryArray = docSnapshot.compactMap { Recipe(fromDictionary: $0) }
-//            completion(.success(<#T##[Recipe]#>))
-//        }
-//    }
 }

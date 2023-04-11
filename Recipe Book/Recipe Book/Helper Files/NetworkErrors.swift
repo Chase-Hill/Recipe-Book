@@ -25,7 +25,7 @@ enum NetworkError: LocalizedError {
         case .unableToDecode:
             return "Unable To Decode The Data From Network. Check Datatask."
         case .unknownError:
-            return "An Unknown Error Has Occured. For Help, Please Call 867-5309. Ask For Jenny."
+            return "An Unknown Error Has Occured."
         }
     }
 }

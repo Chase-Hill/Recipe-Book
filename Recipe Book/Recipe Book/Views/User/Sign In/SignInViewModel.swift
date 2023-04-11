@@ -23,7 +23,6 @@ struct SignInViewModel {
                 print(Auth.auth().currentUser?.email)
                 completion(true, nil)
             }
-            
         }
     }
 }

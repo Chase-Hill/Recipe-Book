@@ -12,7 +12,6 @@
 		AF41A34229D63300000CC40A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A34129D63300000CC40A /* SignUpViewController.swift */; };
 		AF41A34729D6338B000CC40A /* MealDBInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A34629D6338B000CC40A /* MealDBInstructionsViewController.swift */; };
 		AF41A34B29D633D7000CC40A /* FavoritesInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A34A29D633D7000CC40A /* FavoritesInstructionsViewController.swift */; };
-		AF41A34E29D633ED000CC40A /* FavoritesIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A34D29D633ED000CC40A /* FavoritesIngredientsViewController.swift */; };
 		AF41A35029D63417000CC40A /* FavoritesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A34F29D63417000CC40A /* FavoritesCollectionViewController.swift */; };
 		AF41A35229D634BC000CC40A /* UserRecipesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A35129D634BC000CC40A /* UserRecipesCollectionViewController.swift */; };
 		AF41A35529D634E7000CC40A /* UserRecipeInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF41A35429D634E7000CC40A /* UserRecipeInstructionsViewController.swift */; };
@@ -50,6 +49,7 @@
 		AFCA194029E47C39006C9A67 /* MealDBIngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA193F29E47C39006C9A67 /* MealDBIngredientsViewModel.swift */; };
 		AFCA194229E49647006C9A67 /* MealDBCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194129E49647006C9A67 /* MealDBCollectionViewCellViewModel.swift */; };
 		AFCA194429E4AC65006C9A67 /* MealDBInstructionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194329E4AC65006C9A67 /* MealDBInstructionsViewModel.swift */; };
+		AFCA194629E5A633006C9A67 /* FavoritesIngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194529E5A633006C9A67 /* FavoritesIngredientsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +58,6 @@
 		AF41A34129D63300000CC40A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		AF41A34629D6338B000CC40A /* MealDBInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBInstructionsViewController.swift; sourceTree = "<group>"; };
 		AF41A34A29D633D7000CC40A /* FavoritesInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInstructionsViewController.swift; sourceTree = "<group>"; };
-		AF41A34D29D633ED000CC40A /* FavoritesIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesIngredientsViewController.swift; sourceTree = "<group>"; };
 		AF41A34F29D63417000CC40A /* FavoritesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCollectionViewController.swift; sourceTree = "<group>"; };
 		AF41A35129D634BC000CC40A /* UserRecipesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipesCollectionViewController.swift; sourceTree = "<group>"; };
 		AF41A35429D634E7000CC40A /* UserRecipeInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeInstructionsViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		AFCA193F29E47C39006C9A67 /* MealDBIngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBIngredientsViewModel.swift; sourceTree = "<group>"; };
 		AFCA194129E49647006C9A67 /* MealDBCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
 		AFCA194329E4AC65006C9A67 /* MealDBInstructionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBInstructionsViewModel.swift; sourceTree = "<group>"; };
+		AFCA194529E5A633006C9A67 /* FavoritesIngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesIngredientsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,7 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				AF41A34A29D633D7000CC40A /* FavoritesInstructionsViewController.swift */,
-				AF41A34D29D633ED000CC40A /* FavoritesIngredientsViewController.swift */,
+				AFCA194529E5A633006C9A67 /* FavoritesIngredientsTableViewController.swift */,
 			);
 			path = "Favorites Pop-ups";
 			sourceTree = "<group>";
@@ -401,6 +401,7 @@
 			files = (
 				AF41A34229D63300000CC40A /* SignUpViewController.swift in Sources */,
 				AF41A36B29D63DED000CC40A /* MealDBViewModel.swift in Sources */,
+				AFCA194629E5A633006C9A67 /* FavoritesIngredientsTableViewController.swift in Sources */,
 				AF42647F29DB485A004852E1 /* APIService.swift in Sources */,
 				AF41A37D29D66F27000CC40A /* FavoritesCollectionViewCell.swift in Sources */,
 				AFC1508329D4A156003A1699 /* MealDB.swift in Sources */,
@@ -421,7 +422,6 @@
 				AF41A33A29D620BE000CC40A /* Recipe.swift in Sources */,
 				AF42647A29DB3EC8004852E1 /* FirebaseService.swift in Sources */,
 				AF41A35D29D63C4F000CC40A /* SignInViewModel.swift in Sources */,
-				AF41A34E29D633ED000CC40A /* FavoritesIngredientsViewController.swift in Sources */,
 				AF41A33E29D632C5000CC40A /* SignInViewController.swift in Sources */,
 				AF42647D29DB40A1004852E1 /* NetworkErrors.swift in Sources */,
 				AF41A35929D63513000CC40A /* CreateRecipeViewController.swift in Sources */,

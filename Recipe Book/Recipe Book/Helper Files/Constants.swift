@@ -8,7 +8,6 @@
 import Foundation
 
 struct Constants {
-    // www.themealdb.com/api/json/v2/9973533/search.php?s=Chicken
     
     struct MealDB {
         static let baseURL = "https://www.themealdb.com/api/json/v2/9973533"
