@@ -240,7 +240,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="df2-bQ-WdV">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="df2-bQ-WdV">
                                 <rect key="frame" x="16" y="103" width="361" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -883,6 +883,7 @@
         <image name="cooking" width="800" height="482"/>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="doc.text.fill" catalog="system" width="115" height="128"/>
+        <image name="placeholder" width="800" height="400"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>

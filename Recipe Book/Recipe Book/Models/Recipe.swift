@@ -10,48 +10,48 @@ import Foundation
 class Recipe {
     
     enum Key {
-        static let user = "user"
         static let instructions = "instructions"
         static let ingredients = "ingredients"
         static let image = "image"
         static let uuid = "uuid"
         static let collection = "recipes"
+        static var isFavorited = "isFavorited"
     }
     
-    var user: String
     var instructions: String
     var ingredients: String
     var image: String
     var uuid: String
+    var isFavorited: Bool
     
     var dictionaryRepresentation: [String : AnyHashable] {
         [
-            Key.user: self.user,
             Key.instructions: self.instructions,
             Key.ingredients: self.ingredients,
             Key.image: self.image,
-            Key.uuid: self.uuid
+            Key.uuid: self.uuid,
+            Key.isFavorited: self.isFavorited
         ]
     }
     
-    init(user: String, instructions: String, ingredients: String, image: String, uuid: String = UUID().uuidString) {
-        self.user = user
+    init(instructions: String, ingredients: String, image: String, uuid: String = UUID().uuidString, isFavorited: Bool) {
         self.instructions = instructions
         self.ingredients = ingredients
         self.image = image
         self.uuid = uuid
+        self.isFavorited = isFavorited
     }
 }
 
 extension Recipe {
     convenience init?(fromDictionary dictionary: [String : Any]) {
-        guard let user = dictionary[Key.user] as? String,
-              let instructions = dictionary[Key.instructions] as? String,
+        guard let instructions = dictionary[Key.instructions] as? String,
               let ingredients = dictionary[Key.ingredients] as? String,
               let imageURL = dictionary[Key.image] as? String,
-              let uuid = dictionary[Key.uuid] as? String else {print("Check model for bullshittery") ; return nil}
+              let uuid = dictionary[Key.uuid] as? String,
+              let isFavorited = dictionary[Key.isFavorited] else {print("Check model") ; return nil}
         
-        self.init(user: user, instructions: instructions, ingredients: ingredients, image: imageURL, uuid: uuid)
+        self.init(instructions: instructions, ingredients: ingredients, image: imageURL, uuid: uuid, isFavorited: isFavorited as! Bool)
     }
 }
 

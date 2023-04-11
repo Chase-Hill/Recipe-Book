@@ -14,4 +14,8 @@ struct Constants {
         static let searchPath = "/search.php"
         static let searchQuery = "s"
     }
+    
+    struct RecipeImage {
+        static let imageRef = "images"
+    }
 }
