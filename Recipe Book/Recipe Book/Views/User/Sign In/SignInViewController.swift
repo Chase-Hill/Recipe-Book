@@ -34,6 +34,7 @@ class SignInViewController: UIViewController {
     }
     
     // MARK: - Helper Functions
+    #warning("Redo this how I might like it in the future. If time allows")
     func presentMainVC() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "HomeView")

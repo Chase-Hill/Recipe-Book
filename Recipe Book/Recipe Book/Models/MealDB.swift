@@ -19,13 +19,13 @@ struct MealDBRecipe: Decodable {
         case imageURL = "strMealThumb"
         case ingredients
     }
-    
+
     let mealID: String?
     let mealName: String?
     let instructions: String?
     let imageURL: String?
     let ingredients: [Ingredient]
-    
+
     var ingredientString: String {
         var result: String = ""
         ingredients.forEach {
@@ -43,7 +43,7 @@ struct Ingredient: Decodable {
 
 // MARK: - Extensions
 extension MealDBRecipe {
-    
+
     init(from decoder: Decoder) throws {
         let container = try? decoder.container(keyedBy: CodingKeys.self)
         self.mealID = try? container?.decode(String.self, forKey: .mealID)

@@ -17,7 +17,6 @@ class CreateRecipeViewController: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     // MARK: - Actions

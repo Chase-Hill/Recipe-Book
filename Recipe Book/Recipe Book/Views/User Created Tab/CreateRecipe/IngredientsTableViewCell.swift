@@ -13,5 +13,4 @@ class IngredientsTableViewCell: UITableViewCell {
     @IBOutlet weak var ingredientNameTextField: UITextField!
     @IBOutlet weak var measurementAmountTextField: UITextField!
     
-    
 }
