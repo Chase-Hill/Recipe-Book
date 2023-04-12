@@ -108,8 +108,4 @@ struct FirebaseService: FirebaseServicable {
     func deleteImage(from recipe: Recipe) {
         storage.child(Constants.RecipeImage.imageRef).child(recipe.uuid).delete(completion: nil)
     }
-    
-    func saveFavoriteFromMealDB(with id: String, completion: @escaping (Result <MealDBRecipe, NetworkError>) -> Void) {
-        
-    }
 }

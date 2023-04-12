@@ -48,10 +48,7 @@ struct MealService: MealServiceable {
         } .resume()
     }
     
-    #warning("Finish once I have everything else completed")
-    func fetchMealsByIngredients(searchTerm: String, completion: @escaping(Result <[MealDBRecipe], NetworkError>) -> Void) {
-
-    }
+    #warning("Finish once I have everything else completed. Create fetchMealsByIngredients if time allows.")
     
     func fetchImage(imageString: String, completion: @escaping (Result <UIImage, NetworkError>) -> Void) {
         guard let imageURL = URL(string: imageString) else { completion(.failure(.invalidURL)) ; return }

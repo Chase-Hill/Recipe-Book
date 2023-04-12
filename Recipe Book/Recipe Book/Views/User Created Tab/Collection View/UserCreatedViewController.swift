@@ -10,9 +10,9 @@ import FirebaseAuth
 
 class UserCreatedViewController: UIViewController {
 
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     // MARK: - Actions
