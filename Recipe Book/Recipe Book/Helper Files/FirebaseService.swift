@@ -98,6 +98,7 @@ struct FirebaseService: FirebaseServicable {
             switch result {
             case .success(let data):
                 guard let image = UIImage(data: data) else { completion(.failure(.unableToDecode)) ; return }
+                completion(.success(image))
             case .failure(let error):
                 completion(.failure(.thrownError(error))) ; return
             }
@@ -108,4 +109,7 @@ struct FirebaseService: FirebaseServicable {
         storage.child(Constants.RecipeImage.imageRef).child(recipe.uuid).delete(completion: nil)
     }
     
+    func saveFavoriteFromMealDB(with id: String, completion: @escaping (Result <MealDBRecipe, NetworkError>) -> Void) {
+        
+    }
 }

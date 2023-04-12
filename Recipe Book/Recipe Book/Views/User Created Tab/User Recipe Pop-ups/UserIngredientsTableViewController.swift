@@ -1,13 +1,13 @@
 //
-//  FavoritesIngredientsTableViewController.swift
+//  UserIngredientsTableViewController.swift
 //  Recipe Book
 //
-//  Created by Chase on 4/11/23.
+//  Created by Chase on 4/12/23.
 //
 
 import UIKit
 
-class FavoritesIngredientsTableViewController: UITableViewController {
+class UserIngredientsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
