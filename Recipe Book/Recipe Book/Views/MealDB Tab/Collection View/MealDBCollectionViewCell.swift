@@ -12,13 +12,15 @@ class MealDBCollectionViewCell: UICollectionViewCell {
     // MARK: - Outlets
     @IBOutlet weak var mealImageView: ServiceRequestingImageView!
     @IBOutlet weak var recipeNameLabel: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     // MARK: - Properties
     var viewModel: MealDBCollectionViewCellViewModel!
     
     // MARK: - Actions
     @IBAction func bookmarkButtonTapped(_ sender: Any) {
-        #warning("Finish code here once funishing up Favorites folder.")
+        viewModel.saveToFavorites()
+        updateButton()
     }
     
     @IBAction func ingredientsButtonTapped(_ sender: Any) {
@@ -42,6 +44,12 @@ class MealDBCollectionViewCell: UICollectionViewCell {
         guard let mealInstructionsView = storyboard.instantiateViewController(withIdentifier: "instructionsModal") as? MealDBInstructionsViewController else { return }
         mealInstructionsView.viewModel = MealDBInstructionsViewModel(recipe: viewModel.recipe, delegate: mealInstructionsView)
         self.window?.rootViewController?.present(mealInstructionsView, animated: true)
+    }
+    
+    func updateButton() {
+        let favoriteImageName = "bookmark.fill"
+        let favoriteImage = UIImage(systemName: favoriteImageName)
+        favoriteButton.setImage(favoriteImage, for: .normal)
     }
 }
 

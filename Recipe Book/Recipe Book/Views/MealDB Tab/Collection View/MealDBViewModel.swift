@@ -15,8 +15,10 @@ protocol MealDBViewModelDelegate: MealDBViewController {
 class MealDBViewModel {
     
     // MARK: - Properties
+    var recipe: MealDBRecipe?
     var mealDB: MealDBTopLevelDictionary?
     var meals: [MealDBRecipe] = []
+    
     private var service: MealServiceable // Note: - This is a concrete type
     private weak var delegate: MealDBViewModelDelegate?
     

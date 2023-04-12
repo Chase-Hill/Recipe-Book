@@ -13,6 +13,9 @@ struct Constants {
         static let baseURL = "https://www.themealdb.com/api/json/v2/9973533"
         static let searchPath = "/search.php"
         static let searchQuery = "s"
+        static let lookupIDPath = "/lookup.php"
+        static let lookupIDQuery = "i"
+        static let collectionRef = "MealDBFavorites"
     }
     
     struct RecipeImage {
