@@ -45,6 +45,7 @@
 		AFCA194429E4AC65006C9A67 /* MealDBInstructionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194329E4AC65006C9A67 /* MealDBInstructionsViewModel.swift */; };
 		AFCA194A29E61445006C9A67 /* UserCreatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194929E61445006C9A67 /* UserCreatedViewController.swift */; };
 		AFCA194C29E70642006C9A67 /* UserIngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194B29E70642006C9A67 /* UserIngredientsTableViewController.swift */; };
+		AFCA195029E8705D006C9A67 /* MealDBToLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194F29E8705D006C9A67 /* MealDBToLoad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		AFCA194329E4AC65006C9A67 /* MealDBInstructionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBInstructionsViewModel.swift; sourceTree = "<group>"; };
 		AFCA194929E61445006C9A67 /* UserCreatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreatedViewController.swift; sourceTree = "<group>"; };
 		AFCA194B29E70642006C9A67 /* UserIngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIngredientsTableViewController.swift; sourceTree = "<group>"; };
+		AFCA194F29E8705D006C9A67 /* MealDBToLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBToLoad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,8 +275,9 @@
 		AFC1508129D4A146003A1699 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AF41A33929D620BE000CC40A /* Recipe.swift */,
+				AFCA194F29E8705D006C9A67 /* MealDBToLoad.swift */,
 				AFC1508229D4A156003A1699 /* MealDB.swift */,
+				AF41A33929D620BE000CC40A /* Recipe.swift */,
 				AF42648229DB7293004852E1 /* Meal.swift */,
 			);
 			path = Models;
@@ -381,6 +384,7 @@
 				AF41A33A29D620BE000CC40A /* Recipe.swift in Sources */,
 				AF42647A29DB3EC8004852E1 /* FirebaseService.swift in Sources */,
 				AF41A35D29D63C4F000CC40A /* SignInViewModel.swift in Sources */,
+				AFCA195029E8705D006C9A67 /* MealDBToLoad.swift in Sources */,
 				AF41A33E29D632C5000CC40A /* SignInViewController.swift in Sources */,
 				AF42647D29DB40A1004852E1 /* NetworkErrors.swift in Sources */,
 				AF41A35929D63513000CC40A /* CreateRecipeViewController.swift in Sources */,

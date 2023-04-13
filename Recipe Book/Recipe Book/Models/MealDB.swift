@@ -63,10 +63,10 @@ extension MealDBRecipe {
             
             return Ingredient(name: name, measurement: measurement)
         }
-        
+
         self.ingredients = ingredients
     }
-    
+
     private enum IngredientCodingKeys: String, CodingKey, CaseIterable {
         case strIngredient1
         case strIngredient2
@@ -89,7 +89,7 @@ extension MealDBRecipe {
         case strIngredient19
         case strIngredient20
     }
-    
+
     private enum MeasurementsCodingKeys: String, CodingKey, CaseIterable {
         case strMeasure1
         case strMeasure2

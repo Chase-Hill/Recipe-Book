@@ -17,6 +17,7 @@ protocol FirebaseServicable {
     func fetchImage(from recipe: Recipe, completion: @escaping (Result <UIImage, NetworkError>) -> Void)
     func deleteImage(from recipe: Recipe)
     func saveMealDBFavorite(with id: String, from mealDBRecipe: MealDBRecipe, completion: @escaping () -> Void)
+    func loadMealdDBFavorites(completion: @escaping (Result <[MealDBToLoad], NetworkError>) -> Void)
 }
 
 struct FirebaseService: FirebaseServicable {
@@ -117,7 +118,7 @@ struct FirebaseService: FirebaseServicable {
         completion()
     }
     
-    func loadMealdDBFavorites(completion: @escaping (Result <[MealDBRecipe], NetworkError>) -> Void) {
+    func loadMealdDBFavorites(completion: @escaping (Result <[MealDBToLoad], NetworkError>) -> Void) {
         ref.collection(Constants.MealDB.collectionRef).getDocuments { snapshot, error in
             if let error = error {
                 print(error.localizedDescription)
@@ -127,6 +128,9 @@ struct FirebaseService: FirebaseServicable {
             guard let docSnapshot = snapshot?.documents else { completion(.failure(.noData)) ; return }
             
             let dictionaryArray = docSnapshot.compactMap { $0.data() }
+            print(dictionaryArray)
+            let recipes = dictionaryArray.compactMap { MealDBToLoad(fromDictionary: $0) }
+            completion(.success(recipes))
         }
     }
 }
