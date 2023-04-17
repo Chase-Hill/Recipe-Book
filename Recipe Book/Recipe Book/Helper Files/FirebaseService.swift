@@ -16,6 +16,8 @@ protocol FirebaseServicable {
     func saveImage(_ image: UIImage, with uuidString: String, completion: @escaping (Result <URL, NetworkError>) -> Void)
     func fetchImage(from recipe: Recipe, completion: @escaping (Result <UIImage, NetworkError>) -> Void)
     func deleteImage(from recipe: Recipe)
+    func saveMealDBFavorite(with id: String, from mealDBRecipe: MealDBRecipe, completion: @escaping () -> Void)
+    func loadMealdDBFavorites(completion: @escaping (Result <[MealDBToLoad], NetworkError>) -> Void)
 }
 
 struct FirebaseService: FirebaseServicable {
@@ -107,5 +109,33 @@ struct FirebaseService: FirebaseServicable {
     
     func deleteImage(from recipe: Recipe) {
         storage.child(Constants.RecipeImage.imageRef).child(recipe.uuid).delete(completion: nil)
+    }
+    
+    func saveMealDBFavorite(with id: String, from mealDBRecipe: MealDBRecipe, completion: @escaping () -> Void) {
+        guard let mealDBRecipeID = mealDBRecipe.mealID else { return }
+
+        ref.collection(Constants.Collections.mealDBFavorites).document(mealDBRecipeID).setData(["ID" : mealDBRecipeID])
+        completion()
+    }
+    
+    func loadMealdDBFavorites(completion: @escaping (Result <[MealDBToLoad], NetworkError>) -> Void) {
+        ref.collection(Constants.Collections.mealDBFavorites).getDocuments { snapshot, error in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(.failure(.thrownError(error))) ; return
+            }
+            
+            guard let docSnapshot = snapshot?.documents else { completion(.failure(.noData)) ; return }
+            
+            let dictionaryArray = docSnapshot.compactMap { $0.data() }
+            print(dictionaryArray)
+            let recipes = dictionaryArray.compactMap { MealDBToLoad(fromDictionary: $0) }
+            completion(.success(recipes))
+        }
+    }
+    
+    func deleteMealDBFavorite(from mealDBRecipe: MealDBRecipe) {
+        guard let mealDBRecipeID = mealDBRecipe.mealID else { return }
+        ref.collection(Constants.Collections.mealDBFavorites).document(mealDBRecipeID).delete()
     }
 }

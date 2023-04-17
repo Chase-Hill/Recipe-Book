@@ -10,6 +10,7 @@ import UIKit
 protocol MealServiceable {
     func fetchMealsByName(searchTerm: String, completion: @escaping(Result <[MealDBRecipe], NetworkError>) -> Void)
     func fetchImage(imageString: String, completion: @escaping (Result <UIImage, NetworkError>) -> Void)
+    func fetchMealsByID(id: String, completion: @escaping(Result <MealDBRecipe, NetworkError>) -> Void)
 }
 
 struct MealService: MealServiceable {
@@ -61,6 +62,37 @@ struct MealService: MealServiceable {
             
             guard let image = UIImage(data: data) else { completion(.failure(.unableToDecode)) ; return }
             completion(.success(image))
+        } .resume()
+    }
+    
+    func fetchMealsByID(id: String, completion: @escaping(Result <MealDBRecipe, NetworkError>) -> Void) {
+        guard let baseURL = URL(string: Constants.MealDB.baseURL) else { completion(.failure(.invalidURL)) ; return }
+        var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
+        urlComponents?.path.append(Constants.MealDB.lookupIDPath)
+        let recipeIDQueryItem = URLQueryItem(name: Constants.MealDB.lookupIDQuery, value: id)
+        urlComponents?.queryItems = [recipeIDQueryItem]
+        
+        guard let finalURL = urlComponents?.url else { completion(.failure(.invalidURL)) ; return }
+        print("Final Recipe ID URL: \(finalURL)")
+        
+        URLSession.shared.dataTask(with: finalURL) { data, response, error in
+            if let error = error {
+                completion(.failure(.thrownError(error))) ; return
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                print("Fetched Recipes by ID Response Code: \(response.statusCode)")
+            }
+            
+            guard let data = data else { completion(.failure(.noData)) ; return }
+            
+            do {
+                let recipe = try JSONDecoder().decode(MealDBTopLevelDictionary.self, from: data)
+                guard !recipe.meals.isEmpty else { completion(.failure(.noData)) ; return }
+                completion(.success(recipe.meals.first!))
+            } catch {
+                completion(.failure(.unableToDecode)) ; return
+            }
         } .resume()
     }
 }
