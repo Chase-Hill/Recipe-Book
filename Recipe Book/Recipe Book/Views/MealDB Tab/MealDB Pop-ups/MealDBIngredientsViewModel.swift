@@ -7,8 +7,7 @@
 
 import Foundation
 
-protocol MealDBIngredientsViewModelDelegate: MealDBIngredientsTableViewController {
-    // Note: - Need to inform the ViewController to update the views when the fetch is done
+protocol MealDBIngredientsViewModelDelegate: AnyObject {
     func updateViews()
 }
 

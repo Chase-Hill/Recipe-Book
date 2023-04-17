@@ -169,7 +169,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="361" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paG-6M-ZDr">
+                                                <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paG-6M-ZDr">
                                                     <rect key="frame" x="314" y="15" width="41" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="41" id="MhR-Pi-gSx"/>
@@ -193,13 +193,16 @@
                                                     </menu>
                                                     <state key="normal" title="Button"/>
                                                 </button>
-                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IOg-xW-IXC">
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IOg-xW-IXC">
                                                     <rect key="frame" x="261" y="13" width="45" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingredient" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sfx-d8-x4g">
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingredient" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sfx-d8-x4g">
                                                     <rect key="frame" x="0.0" y="13" width="253" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="253" id="gIK-Yy-q5E"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -207,9 +210,11 @@
                                             <constraints>
                                                 <constraint firstItem="paG-6M-ZDr" firstAttribute="centerY" secondItem="sfx-d8-x4g" secondAttribute="centerY" id="2iK-XG-5UL"/>
                                                 <constraint firstItem="paG-6M-ZDr" firstAttribute="centerY" secondItem="dXC-4i-3gS" secondAttribute="centerY" id="4el-tl-cgD"/>
+                                                <constraint firstItem="IOg-xW-IXC" firstAttribute="leading" secondItem="sfx-d8-x4g" secondAttribute="trailing" constant="8" id="4m7-MS-jyg"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="paG-6M-ZDr" secondAttribute="trailing" constant="-14" id="DL6-V1-ogZ"/>
                                                 <constraint firstItem="paG-6M-ZDr" firstAttribute="leading" secondItem="IOg-xW-IXC" secondAttribute="trailing" constant="8" id="lcA-Nr-aCy"/>
                                                 <constraint firstItem="paG-6M-ZDr" firstAttribute="centerY" secondItem="IOg-xW-IXC" secondAttribute="centerY" id="nQF-X2-DjQ"/>
+                                                <constraint firstItem="sfx-d8-x4g" firstAttribute="leading" secondItem="dXC-4i-3gS" secondAttribute="leadingMargin" constant="-20" id="zWk-ZD-BWq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -417,7 +422,7 @@
                     <navigationItem key="navigationItem" id="vOQ-tD-KpM">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="qLt-OY-WAc">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="QA5-oN-MAF">
-                                <rect key="frame" x="16" y="5" width="90" height="34.333333333333336"/>
+                                <rect key="frame" x="16" y="4.6666666666666679" width="90" height="34.666666666666657"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
@@ -429,7 +434,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Create Recipe" style="plain" id="UYv-Be-VPA">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="uOM-oV-UWF">
-                                <rect key="frame" x="246" y="5" width="131" height="34.333333333333336"/>
+                                <rect key="frame" x="246" y="4.6666666666666679" width="131" height="34.666666666666657"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Create Recipe"/>
@@ -569,7 +574,7 @@
                                 </segments>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SJH-F4-jxD">
-                                <rect key="frame" x="0.0" y="138" width="393" height="714"/>
+                                <rect key="frame" x="0.0" y="138" width="393" height="631"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NIf-dX-KvM">
                                     <size key="itemSize" width="392" height="230"/>
@@ -668,7 +673,7 @@
                         <viewLayoutGuide key="safeArea" id="5M3-Mj-qSJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="SJH-F4-jxD" secondAttribute="bottom" constant="-83" id="0rU-dO-R6Q"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="SJH-F4-jxD" secondAttribute="bottom" id="0rU-dO-R6Q"/>
                             <constraint firstItem="Nu2-mN-1G8" firstAttribute="top" secondItem="5M3-Mj-qSJ" secondAttribute="top" id="1zN-cC-hxe"/>
                             <constraint firstItem="Nu2-mN-1G8" firstAttribute="leading" secondItem="SJH-F4-jxD" secondAttribute="leading" id="4kE-Jo-uJK"/>
                             <constraint firstItem="eVC-sJ-5c5" firstAttribute="leading" secondItem="Nu2-mN-1G8" secondAttribute="leading" id="6eI-JR-f2l"/>
@@ -717,7 +722,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QkW-lB-8hA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2500" y="132"/>
+            <point key="canvasLocation" x="2500" y="127"/>
         </scene>
         <!--MealDB Ingredients Table View Controller-->
         <scene sceneID="OAn-b2-WKu">
@@ -761,7 +766,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwI-44-joc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3293.8931297709923" y="131.69014084507043"/>
+            <point key="canvasLocation" x="3294" y="127"/>
         </scene>
     </scenes>
     <resources>

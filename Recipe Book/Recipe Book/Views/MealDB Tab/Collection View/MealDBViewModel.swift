@@ -6,12 +6,10 @@
 //
 import UIKit
 
-protocol MealDBViewModelDelegate: MealDBViewController {
-    // Note: - Need to inform the ViewController to update the views when the fetch is done
+protocol MealDBViewModelDelegate: AnyObject {
     func updateViews()
 }
 
-// Note: - This is a concrete type
 class MealDBViewModel {
     
     // MARK: - Properties
@@ -21,7 +19,7 @@ class MealDBViewModel {
     var meals: [MealDBRecipe] = []
     var favoriteMeals: [MealDBRecipe] = []
     
-    private var mealService: MealServiceable // Note: - This is a concrete type
+    private var mealService: MealServiceable
     private var fireService: FirebaseServicable
     private weak var delegate: MealDBViewModelDelegate?
     
@@ -71,9 +69,10 @@ class MealDBViewModel {
             }
             self.group.wait()
             DispatchQueue.main.async {
-                print("😀😀😀😀😀😀😀😀😀😀😀😀😀😀")
+                print("Dispatch Group Finished")
                 self.favoriteMeals = mealsToReturn
             }
+            self.delegate?.updateViews()
         }
     }
     

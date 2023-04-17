@@ -36,8 +36,8 @@ class MealDBViewController: UIViewController {
     
     // MARK: - Actions
     @objc func segmentChanged() {
-        // Note: - Datasource = Segmentedcontrol.selectedSegmentIndex
         setUpDatasource()
+        self.fetch()
         mealDBCollectionView.reloadData()
     }
     
@@ -47,6 +47,7 @@ class MealDBViewController: UIViewController {
     
     func fetch() {
         viewModel.fetchFavoritesFromFirebase()
+        mealDBCollectionView.reloadData()
     }
 }
 

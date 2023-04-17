@@ -114,12 +114,12 @@ struct FirebaseService: FirebaseServicable {
     func saveMealDBFavorite(with id: String, from mealDBRecipe: MealDBRecipe, completion: @escaping () -> Void) {
         guard let mealDBRecipeID = mealDBRecipe.mealID else { return }
 
-        ref.collection(Constants.MealDB.collectionRef).document(mealDBRecipeID).setData(["ID" : mealDBRecipeID])
+        ref.collection(Constants.Collections.mealDBFavorites).document(mealDBRecipeID).setData(["ID" : mealDBRecipeID])
         completion()
     }
     
     func loadMealdDBFavorites(completion: @escaping (Result <[MealDBToLoad], NetworkError>) -> Void) {
-        ref.collection(Constants.MealDB.collectionRef).getDocuments { snapshot, error in
+        ref.collection(Constants.Collections.mealDBFavorites).getDocuments { snapshot, error in
             if let error = error {
                 print(error.localizedDescription)
                 completion(.failure(.thrownError(error))) ; return
@@ -132,5 +132,10 @@ struct FirebaseService: FirebaseServicable {
             let recipes = dictionaryArray.compactMap { MealDBToLoad(fromDictionary: $0) }
             completion(.success(recipes))
         }
+    }
+    
+    func deleteMealDBFavorite(from mealDBRecipe: MealDBRecipe) {
+        guard let mealDBRecipeID = mealDBRecipe.mealID else { return }
+        ref.collection(Constants.Collections.mealDBFavorites).document(mealDBRecipeID).delete()
     }
 }
