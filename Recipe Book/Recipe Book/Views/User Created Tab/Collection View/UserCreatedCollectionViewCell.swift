@@ -11,8 +11,7 @@ class UserCreatedCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Outlets
     @IBOutlet weak var userCreatedImageView: UIImageView!
-    @IBOutlet weak var userCreatedInstructionsLabel: UILabel!
-    @IBOutlet weak var userCreatedIngredientsLabel: UILabel!
+    @IBOutlet weak var recipeNameLabel: UILabel!
     
     // MARK: - Actions
     @IBAction func favoriteButtonTapped(_ sender: Any) {

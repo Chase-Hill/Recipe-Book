@@ -10,6 +10,13 @@ import FirebaseAuth
 
 class UserCreatedViewController: UIViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var userRecipesSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var userRecipesCollectionView: UICollectionView!
+    
+    
+    
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +26,7 @@ class UserCreatedViewController: UIViewController {
     @IBAction func signOutButtonTapped(_ sender: Any) {
         signOutAlert()
     }
+    
     
     // MARK: - Functions
     #warning("Move to ViewModel later")

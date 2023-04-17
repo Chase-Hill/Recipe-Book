@@ -244,7 +244,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Recipe!" id="GaI-8b-QuD">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="Ab5-OC-UgP"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Ab5-OC-UgP">
+                            <connections>
+                                <action selector="saveRecipeButtonTapped:" destination="Q5N-oJ-Vlt" id="paW-Fs-vaT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="createRecipeImageView" destination="df2-bQ-WdV" id="Y2P-YO-AQJ"/>
@@ -349,7 +353,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aHq-b7-9S7">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aHq-b7-9S7" customClass="UserCreatedCollectionViewCell" customModule="Recipe_Book" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="262"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="erp-8j-jYV">
@@ -373,12 +377,18 @@
                                                     <color key="tintColor" systemColor="systemRedColor"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="deleteRecipeButtonTapped:" destination="aHq-b7-9S7" eventType="touchUpInside" id="FLS-5c-cZY"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZF-BY-gqm">
                                                     <rect key="frame" x="346" y="16" width="47" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="bookmark" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="favoriteButtonTapped:" destination="aHq-b7-9S7" eventType="touchUpInside" id="WfC-4S-x3k"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAJ-98-k7U">
                                                     <rect key="frame" x="58" y="181" width="114" height="35"/>
@@ -403,6 +413,10 @@
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="393" height="262"/>
+                                        <connections>
+                                            <outlet property="recipeNameLabel" destination="5h7-rm-Doy" id="ZD1-4Y-3Y1"/>
+                                            <outlet property="userCreatedImageView" destination="VDd-Ei-XP5" id="vho-sl-hiH"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -445,6 +459,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="userRecipesCollectionView" destination="I0v-zw-qFP" id="vnw-9m-x4u"/>
+                        <outlet property="userRecipesSegmentedControl" destination="Hfe-Ye-1K2" id="fvm-WK-Z9N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N80-bm-CUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

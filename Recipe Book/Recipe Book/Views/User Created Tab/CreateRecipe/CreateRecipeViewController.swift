@@ -23,4 +23,8 @@ class CreateRecipeViewController: UIViewController {
     @IBAction func addIngredientButtonTapped(_ sender: Any) {
         
     }
+    
+    @IBAction func saveRecipeButtonTapped(_ sender: Any) {
+        
+    }
 }

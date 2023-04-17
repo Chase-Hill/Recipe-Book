@@ -47,6 +47,8 @@
 		AFCA194C29E70642006C9A67 /* UserIngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194B29E70642006C9A67 /* UserIngredientsTableViewController.swift */; };
 		AFCA195029E8705D006C9A67 /* MealDBToLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194F29E8705D006C9A67 /* MealDBToLoad.swift */; };
 		AFCA195229E8A3D3006C9A67 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA195129E8A3D3006C9A67 /* User.swift */; };
+		AFCA195429EDCACD006C9A67 /* UserRecipeInstructionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA195329EDCACD006C9A67 /* UserRecipeInstructionsViewModel.swift */; };
+		AFCA195629EDCAE8006C9A67 /* UserIngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA195529EDCAE8006C9A67 /* UserIngredientsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +91,8 @@
 		AFCA194B29E70642006C9A67 /* UserIngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIngredientsTableViewController.swift; sourceTree = "<group>"; };
 		AFCA194F29E8705D006C9A67 /* MealDBToLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBToLoad.swift; sourceTree = "<group>"; };
 		AFCA195129E8A3D3006C9A67 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AFCA195329EDCACD006C9A67 /* UserRecipeInstructionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeInstructionsViewModel.swift; sourceTree = "<group>"; };
+		AFCA195529EDCAE8006C9A67 /* UserIngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIngredientsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,9 +170,9 @@
 		AF41A35A29D63516000CC40A /* CreateRecipe */ = {
 			isa = PBXGroup;
 			children = (
-				AF41A35829D63513000CC40A /* CreateRecipeViewController.swift */,
-				AF41A38029D671A2000CC40A /* IngredientsTableViewCell.swift */,
 				AF41A36D29D63E41000CC40A /* CreateRecipeViewModel.swift */,
+				AF41A38029D671A2000CC40A /* IngredientsTableViewCell.swift */,
+				AF41A35829D63513000CC40A /* CreateRecipeViewController.swift */,
 			);
 			path = CreateRecipe;
 			sourceTree = "<group>";
@@ -176,8 +180,8 @@
 		AF41A35B29D63C40000CC40A /* Sign In */ = {
 			isa = PBXGroup;
 			children = (
-				AF41A33D29D632C5000CC40A /* SignInViewController.swift */,
 				AF41A35C29D63C4F000CC40A /* SignInViewModel.swift */,
+				AF41A33D29D632C5000CC40A /* SignInViewController.swift */,
 			);
 			path = "Sign In";
 			sourceTree = "<group>";
@@ -185,8 +189,8 @@
 		AF41A36029D63C5F000CC40A /* Create Account */ = {
 			isa = PBXGroup;
 			children = (
-				AF41A34129D63300000CC40A /* SignUpViewController.swift */,
 				AF41A35E29D63C5A000CC40A /* SignUpViewModel.swift */,
+				AF41A34129D63300000CC40A /* SignUpViewController.swift */,
 			);
 			path = "Create Account";
 			sourceTree = "<group>";
@@ -204,8 +208,10 @@
 		AF41A36829D63CF3000CC40A /* User Recipe Pop-ups */ = {
 			isa = PBXGroup;
 			children = (
-				AF41A35429D634E7000CC40A /* UserRecipeInstructionsViewController.swift */,
+				AFCA195529EDCAE8006C9A67 /* UserIngredientsViewModel.swift */,
+				AFCA195329EDCACD006C9A67 /* UserRecipeInstructionsViewModel.swift */,
 				AFCA194B29E70642006C9A67 /* UserIngredientsTableViewController.swift */,
+				AF41A35429D634E7000CC40A /* UserRecipeInstructionsViewController.swift */,
 			);
 			path = "User Recipe Pop-ups";
 			sourceTree = "<group>";
@@ -235,12 +241,12 @@
 		AF42647B29DB3ECE004852E1 /* Helper Files */ = {
 			isa = PBXGroup;
 			children = (
-				AFCA193929DE3BE9006C9A67 /* ServiceRequestingImageView.swift */,
-				AF42647929DB3EC8004852E1 /* FirebaseService.swift */,
-				AF42647C29DB40A1004852E1 /* NetworkErrors.swift */,
-				AF42648029DB4866004852E1 /* MealService.swift */,
-				AF42647E29DB485A004852E1 /* APIService.swift */,
 				AFCA193129DC80C9006C9A67 /* Constants.swift */,
+				AF42647E29DB485A004852E1 /* APIService.swift */,
+				AF42648029DB4866004852E1 /* MealService.swift */,
+				AF42647C29DB40A1004852E1 /* NetworkErrors.swift */,
+				AF42647929DB3EC8004852E1 /* FirebaseService.swift */,
+				AFCA193929DE3BE9006C9A67 /* ServiceRequestingImageView.swift */,
 			);
 			path = "Helper Files";
 			sourceTree = "<group>";
@@ -277,11 +283,11 @@
 		AFC1508129D4A146003A1699 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AFCA194F29E8705D006C9A67 /* MealDBToLoad.swift */,
-				AFC1508229D4A156003A1699 /* MealDB.swift */,
-				AF41A33929D620BE000CC40A /* Recipe.swift */,
-				AF42648229DB7293004852E1 /* Meal.swift */,
 				AFCA195129E8A3D3006C9A67 /* User.swift */,
+				AF42648229DB7293004852E1 /* Meal.swift */,
+				AF41A33929D620BE000CC40A /* Recipe.swift */,
+				AFC1508229D4A156003A1699 /* MealDB.swift */,
+				AFCA194F29E8705D006C9A67 /* MealDBToLoad.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -370,6 +376,7 @@
 				AF41A36B29D63DED000CC40A /* MealDBViewModel.swift in Sources */,
 				AF42647F29DB485A004852E1 /* APIService.swift in Sources */,
 				AFC1508329D4A156003A1699 /* MealDB.swift in Sources */,
+				AFCA195429EDCACD006C9A67 /* UserRecipeInstructionsViewModel.swift in Sources */,
 				AF41A35529D634E7000CC40A /* UserRecipeInstructionsViewController.swift in Sources */,
 				AF41A37B29D648F1000CC40A /* MealDBCollectionViewCell.swift in Sources */,
 				AFCA193229DC80C9006C9A67 /* Constants.swift in Sources */,
@@ -396,6 +403,7 @@
 				AF41A38129D671A2000CC40A /* IngredientsTableViewCell.swift in Sources */,
 				AF41A36E29D63E41000CC40A /* CreateRecipeViewModel.swift in Sources */,
 				AF41A36729D63CEC000CC40A /* UserRecipesViewModel.swift in Sources */,
+				AFCA195629EDCAE8006C9A67 /* UserIngredientsViewModel.swift in Sources */,
 				AFCA194029E47C39006C9A67 /* MealDBIngredientsViewModel.swift in Sources */,
 				AF41A37F29D67057000CC40A /* UserCreatedCollectionViewCell.swift in Sources */,
 				AFCA195229E8A3D3006C9A67 /* User.swift in Sources */,
