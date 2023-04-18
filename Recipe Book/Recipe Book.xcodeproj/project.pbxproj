@@ -46,7 +46,6 @@
 		AFCA194A29E61445006C9A67 /* UserCreatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194929E61445006C9A67 /* UserCreatedViewController.swift */; };
 		AFCA194C29E70642006C9A67 /* UserIngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194B29E70642006C9A67 /* UserIngredientsTableViewController.swift */; };
 		AFCA195029E8705D006C9A67 /* MealDBToLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA194F29E8705D006C9A67 /* MealDBToLoad.swift */; };
-		AFCA195229E8A3D3006C9A67 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA195129E8A3D3006C9A67 /* User.swift */; };
 		AFCA195429EDCACD006C9A67 /* UserRecipeInstructionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA195329EDCACD006C9A67 /* UserRecipeInstructionsViewModel.swift */; };
 		AFCA195629EDCAE8006C9A67 /* UserIngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA195529EDCAE8006C9A67 /* UserIngredientsViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -90,7 +89,6 @@
 		AFCA194929E61445006C9A67 /* UserCreatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreatedViewController.swift; sourceTree = "<group>"; };
 		AFCA194B29E70642006C9A67 /* UserIngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIngredientsTableViewController.swift; sourceTree = "<group>"; };
 		AFCA194F29E8705D006C9A67 /* MealDBToLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDBToLoad.swift; sourceTree = "<group>"; };
-		AFCA195129E8A3D3006C9A67 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AFCA195329EDCACD006C9A67 /* UserRecipeInstructionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeInstructionsViewModel.swift; sourceTree = "<group>"; };
 		AFCA195529EDCAE8006C9A67 /* UserIngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIngredientsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -283,7 +281,6 @@
 		AFC1508129D4A146003A1699 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AFCA195129E8A3D3006C9A67 /* User.swift */,
 				AF42648229DB7293004852E1 /* Meal.swift */,
 				AF41A33929D620BE000CC40A /* Recipe.swift */,
 				AFC1508229D4A156003A1699 /* MealDB.swift */,
@@ -406,7 +403,6 @@
 				AFCA195629EDCAE8006C9A67 /* UserIngredientsViewModel.swift in Sources */,
 				AFCA194029E47C39006C9A67 /* MealDBIngredientsViewModel.swift in Sources */,
 				AF41A37F29D67057000CC40A /* UserCreatedCollectionViewCell.swift in Sources */,
-				AFCA195229E8A3D3006C9A67 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

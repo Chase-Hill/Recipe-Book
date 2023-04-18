@@ -18,9 +18,10 @@ struct Constants {
     }
     
     struct Collections {
+        static let userRef = "Users"
+        static let userRecipes = "UserRecipes"
         static let userFavorites = "UserFavorites"
         static let mealDBFavorites = "MealDBFavorites"
-        static let userCollectionRef = "Users"
     }
     
     struct RecipeImage {

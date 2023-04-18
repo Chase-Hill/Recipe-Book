@@ -6,11 +6,12 @@
 //
 
 import UIKit
-import FirebaseFirestore
+import FirebaseAuth
 import FirebaseStorage
+import FirebaseFirestore
 
 protocol FirebaseServicable {
-    func saveRecipe(instructions: String, ingredients: String, image: UIImage, completion: @escaping () -> Void)
+    func saveRecipe(name: String, instructions: String, ingredients: String, image: UIImage, completion: @escaping () -> Void)
     func loadRecipes(completion: @escaping (Result <[Recipe], NetworkError>) -> Void)
     func deleteRecipe(with recipe: Recipe)
     func saveImage(_ image: UIImage, with uuidString: String, completion: @escaping (Result <URL, NetworkError>) -> Void)
@@ -27,15 +28,15 @@ struct FirebaseService: FirebaseServicable {
     let storage = Storage.storage().reference()
     
     // MARK: - Functions
-    func saveRecipe(instructions: String, ingredients: String, image: UIImage, completion: @escaping () -> Void) {
-        
+    func saveRecipe(name: String, instructions: String, ingredients: String, image: UIImage, completion: @escaping () -> Void) {
         let uuid = UUID().uuidString
+        guard let userID = Auth.auth().currentUser?.uid else { return }
         
         saveImage(image, with: uuid) { result in
             switch result {
             case .success(let imageURL):
-                let recipe = Recipe(instructions: instructions, ingredients: ingredients, image: imageURL.absoluteString, isFavorited: false)
-                ref.collection(Recipe.Key.collection).document(recipe.uuid).setData(recipe.dictionaryRepresentation)
+                let recipe = Recipe(name: name, instructions: instructions, ingredients: ingredients, image: imageURL.absoluteString, isFavorited: false)
+                ref.collection(Constants.Collections.userRef).document(userID).collection(Constants.Collections.userRecipes).document(recipe.uuid).setData(recipe.dictionaryRepresentation)
                 completion()
             case .failure(let failure):
                 print(failure) ; return
@@ -44,7 +45,8 @@ struct FirebaseService: FirebaseServicable {
     }
     
     func loadRecipes(completion: @escaping (Result <[Recipe], NetworkError>) -> Void) {
-        ref.collection(Recipe.Key.collection).getDocuments { snapshot, error in
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        ref.collection(Constants.Collections.userRef).document(userID).collection(Constants.Collections.userRecipes).getDocuments { snapshot, error in
             if let error = error {
                 print(error.localizedDescription)
                 completion(.failure(.thrownError(error))) ; return
@@ -59,7 +61,8 @@ struct FirebaseService: FirebaseServicable {
     }
     
     func deleteRecipe(with recipe: Recipe) {
-        ref.collection(Recipe.Key.collection).document(recipe.uuid).delete()
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        ref.collection(Constants.Collections.userRef).document(userID).collection(Constants.Collections.userRecipes).document(recipe.uuid).delete()
         deleteImage(from: recipe)
     }
     
@@ -113,13 +116,15 @@ struct FirebaseService: FirebaseServicable {
     
     func saveMealDBFavorite(with id: String, from mealDBRecipe: MealDBRecipe, completion: @escaping () -> Void) {
         guard let mealDBRecipeID = mealDBRecipe.mealID else { return }
+        guard let userID = Auth.auth().currentUser?.uid else { return }
 
-        ref.collection(Constants.Collections.mealDBFavorites).document(mealDBRecipeID).setData(["ID" : mealDBRecipeID])
+        ref.collection(Constants.Collections.userRef).document(userID).collection(Constants.Collections.mealDBFavorites).document(mealDBRecipeID).setData(["ID" : mealDBRecipeID])
         completion()
     }
     
     func loadMealdDBFavorites(completion: @escaping (Result <[MealDBToLoad], NetworkError>) -> Void) {
-        ref.collection(Constants.Collections.mealDBFavorites).getDocuments { snapshot, error in
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        ref.collection(Constants.Collections.userRef).document(userID).collection(Constants.Collections.mealDBFavorites).getDocuments { snapshot, error in
             if let error = error {
                 print(error.localizedDescription)
                 completion(.failure(.thrownError(error))) ; return
@@ -136,6 +141,7 @@ struct FirebaseService: FirebaseServicable {
     
     func deleteMealDBFavorite(from mealDBRecipe: MealDBRecipe) {
         guard let mealDBRecipeID = mealDBRecipe.mealID else { return }
-        ref.collection(Constants.Collections.mealDBFavorites).document(mealDBRecipeID).delete()
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        ref.collection(Constants.Collections.userRef).document(userID).collection(Constants.Collections.mealDBFavorites).document(mealDBRecipeID).delete()
     }
 }

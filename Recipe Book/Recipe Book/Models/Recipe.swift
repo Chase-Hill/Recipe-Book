@@ -10,6 +10,7 @@ import Foundation
 class Recipe {
     
     enum Key {
+        static let recipeName = "recipeName"
         static let instructions = "instructions"
         static let ingredients = "ingredients"
         static let image = "image"
@@ -18,6 +19,7 @@ class Recipe {
         static var isFavorited = "isFavorited"
     }
     
+    var recipeName: String
     var instructions: String
     var ingredients: String
     var image: String
@@ -26,6 +28,7 @@ class Recipe {
     
     var dictionaryRepresentation: [String : AnyHashable] {
         [
+            Key.recipeName: self.recipeName,
             Key.instructions: self.instructions,
             Key.ingredients: self.ingredients,
             Key.image: self.image,
@@ -34,7 +37,8 @@ class Recipe {
         ]
     }
     
-    init(instructions: String, ingredients: String, image: String, uuid: String = UUID().uuidString, isFavorited: Bool) {
+    init(name: String, instructions: String, ingredients: String, image: String, uuid: String = UUID().uuidString, isFavorited: Bool) {
+        self.recipeName = name
         self.instructions = instructions
         self.ingredients = ingredients
         self.image = image
@@ -45,13 +49,14 @@ class Recipe {
 
 extension Recipe {
     convenience init?(fromDictionary dictionary: [String : Any]) {
-        guard let instructions = dictionary[Key.instructions] as? String,
+        guard let recipeName = dictionary[Key.recipeName] as? String,
+              let instructions = dictionary[Key.instructions] as? String,
               let ingredients = dictionary[Key.ingredients] as? String,
               let imageURL = dictionary[Key.image] as? String,
               let uuid = dictionary[Key.uuid] as? String,
               let isFavorited = dictionary[Key.isFavorited] else {print("Check model") ; return nil}
         
-        self.init(instructions: instructions, ingredients: ingredients, image: imageURL, uuid: uuid, isFavorited: isFavorited as! Bool)
+        self.init(name: recipeName, instructions: instructions, ingredients: ingredients, image: imageURL, uuid: uuid, isFavorited: isFavorited as! Bool)
     }
 }
 
