@@ -27,7 +27,7 @@ struct MealService: MealServiceable {
         urlComponents?.queryItems = [recipeNameQueryItem]
         
         guard let finalURl = urlComponents?.url else { completion(.failure(.invalidURL)) ; return }
-        print("Final Recipe URL: \(finalURl)")
+        print("Final UserRecipe URL: \(finalURl)")
         
         URLSession.shared.dataTask(with: finalURl) { data, response, error in
             if let error = error {
@@ -35,7 +35,7 @@ struct MealService: MealServiceable {
             }
             
             if let response = response as? HTTPURLResponse {
-                print("Recipe Search Status Code: \(response.statusCode)")
+                print("UserRecipe Search Status Code: \(response.statusCode)")
             }
             
             guard let data = data else { completion(.failure(.noData)) ; return }
@@ -73,7 +73,7 @@ struct MealService: MealServiceable {
         urlComponents?.queryItems = [recipeIDQueryItem]
         
         guard let finalURL = urlComponents?.url else { completion(.failure(.invalidURL)) ; return }
-        print("Final Recipe ID URL: \(finalURL)")
+        print("Final UserRecipe ID URL: \(finalURL)")
         
         URLSession.shared.dataTask(with: finalURL) { data, response, error in
             if let error = error {

@@ -7,7 +7,9 @@
 
 import Foundation
 
-class Recipe {
+// Note: - Explain what line 35 is doing in my own words and why it works.
+
+class UserRecipe {
     
     enum Key {
         static let recipeName = "recipeName"
@@ -21,7 +23,7 @@ class Recipe {
     
     var recipeName: String
     var instructions: String
-    var ingredients: String
+    var ingredients: [UserIngredient]
     var image: String
     var uuid: String
     var isFavorited: Bool
@@ -30,14 +32,14 @@ class Recipe {
         [
             Key.recipeName: self.recipeName,
             Key.instructions: self.instructions,
-            Key.ingredients: self.ingredients,
+            Key.ingredients: self.ingredients.map{ $0.dictionaryRepresentation },
             Key.image: self.image,
             Key.uuid: self.uuid,
             Key.isFavorited: self.isFavorited
         ]
     }
     
-    init(name: String, instructions: String, ingredients: String, image: String, uuid: String = UUID().uuidString, isFavorited: Bool) {
+    init(name: String, instructions: String, ingredients: [UserIngredient], image: String, uuid: String = UUID().uuidString, isFavorited: Bool) {
         self.recipeName = name
         self.instructions = instructions
         self.ingredients = ingredients
@@ -47,11 +49,32 @@ class Recipe {
     }
 }
 
-extension Recipe {
+struct UserIngredient: Decodable, Hashable {
+    
+    enum Key {
+        static let ingredientName = "ingredientName"
+        static let measurementNumber = "measurementNumber"
+        static let measurementType = "measurementType"
+    }
+
+    var ingredientName: String
+    var measurementNumber: String
+    var measurementType: String
+    
+    var dictionaryRepresentation: [String : AnyHashable] {
+        [
+            Key.ingredientName: self.ingredientName,
+            Key.measurementNumber: self.measurementNumber,
+            Key.measurementType: self.measurementType
+        ]
+    }
+}
+
+extension UserRecipe {
     convenience init?(fromDictionary dictionary: [String : Any]) {
         guard let recipeName = dictionary[Key.recipeName] as? String,
               let instructions = dictionary[Key.instructions] as? String,
-              let ingredients = dictionary[Key.ingredients] as? String,
+              let ingredients = dictionary[Key.ingredients] as? [UserIngredient],
               let imageURL = dictionary[Key.image] as? String,
               let uuid = dictionary[Key.uuid] as? String,
               let isFavorited = dictionary[Key.isFavorited] else {print("Check model") ; return nil}
@@ -60,8 +83,8 @@ extension Recipe {
     }
 }
 
-extension Recipe: Equatable {
-    static func == (lhs: Recipe, rhs: Recipe) -> Bool {
+extension UserRecipe: Equatable {
+    static func == (lhs: UserRecipe, rhs: UserRecipe) -> Bool {
         return lhs.uuid == rhs.uuid
     }
 }

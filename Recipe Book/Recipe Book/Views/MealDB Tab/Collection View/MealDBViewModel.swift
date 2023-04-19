@@ -13,12 +13,13 @@ protocol MealDBViewModelDelegate: AnyObject {
 class MealDBViewModel {
     
     // MARK: - Properties
-    let group = DispatchGroup()
     var recipe: MealDBRecipe?
-    var mealDB: MealDBTopLevelDictionary?
+    let group = DispatchGroup()
     var meals: [MealDBRecipe] = []
+    var mealDB: MealDBTopLevelDictionary?
     var favoriteMeals: [MealDBRecipe] = []
     
+    // MARK: - Dependencies
     private var mealService: MealServiceable
     private var fireService: FirebaseServicable
     private weak var delegate: MealDBViewModelDelegate?

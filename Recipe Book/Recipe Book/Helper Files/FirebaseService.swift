@@ -11,12 +11,13 @@ import FirebaseStorage
 import FirebaseFirestore
 
 protocol FirebaseServicable {
-    func saveRecipe(name: String, instructions: String, ingredients: String, image: UIImage, completion: @escaping () -> Void)
-    func loadRecipes(completion: @escaping (Result <[Recipe], NetworkError>) -> Void)
-    func deleteRecipe(with recipe: Recipe)
+    func saveRecipe(name: String, instructions: String, ingredients: [UserIngredient
+    ], image: UIImage, completion: @escaping () -> Void)
+    func loadRecipes(completion: @escaping (Result <[UserRecipe], NetworkError>) -> Void)
+    func deleteRecipe(with recipe: UserRecipe)
     func saveImage(_ image: UIImage, with uuidString: String, completion: @escaping (Result <URL, NetworkError>) -> Void)
-    func fetchImage(from recipe: Recipe, completion: @escaping (Result <UIImage, NetworkError>) -> Void)
-    func deleteImage(from recipe: Recipe)
+    func fetchImage(from recipe: UserRecipe, completion: @escaping (Result <UIImage, NetworkError>) -> Void)
+    func deleteImage(from recipe: UserRecipe)
     func saveMealDBFavorite(with id: String, from mealDBRecipe: MealDBRecipe, completion: @escaping () -> Void)
     func loadMealdDBFavorites(completion: @escaping (Result <[MealDBToLoad], NetworkError>) -> Void)
 }
@@ -28,14 +29,15 @@ struct FirebaseService: FirebaseServicable {
     let storage = Storage.storage().reference()
     
     // MARK: - Functions
-    func saveRecipe(name: String, instructions: String, ingredients: String, image: UIImage, completion: @escaping () -> Void) {
+    func saveRecipe(name: String, instructions: String, ingredients: [UserIngredient
+    ], image: UIImage, completion: @escaping () -> Void) {
         let uuid = UUID().uuidString
         guard let userID = Auth.auth().currentUser?.uid else { return }
         
         saveImage(image, with: uuid) { result in
             switch result {
             case .success(let imageURL):
-                let recipe = Recipe(name: name, instructions: instructions, ingredients: ingredients, image: imageURL.absoluteString, isFavorited: false)
+                let recipe = UserRecipe(name: name, instructions: instructions, ingredients: ingredients, image: imageURL.absoluteString, isFavorited: false)
                 ref.collection(Constants.Collections.userRef).document(userID).collection(Constants.Collections.userRecipes).document(recipe.uuid).setData(recipe.dictionaryRepresentation)
                 completion()
             case .failure(let failure):
@@ -44,7 +46,7 @@ struct FirebaseService: FirebaseServicable {
         }
     }
     
-    func loadRecipes(completion: @escaping (Result <[Recipe], NetworkError>) -> Void) {
+    func loadRecipes(completion: @escaping (Result <[UserRecipe], NetworkError>) -> Void) {
         guard let userID = Auth.auth().currentUser?.uid else { return }
         ref.collection(Constants.Collections.userRef).document(userID).collection(Constants.Collections.userRecipes).getDocuments { snapshot, error in
             if let error = error {
@@ -55,12 +57,12 @@ struct FirebaseService: FirebaseServicable {
             guard let docSnapshot = snapshot?.documents else { completion(.failure(.noData)) ; return }
             
             let dictionaryArray = docSnapshot.compactMap { $0.data() }
-            let recipes = dictionaryArray.compactMap { Recipe(fromDictionary: $0) }
+            let recipes = dictionaryArray.compactMap { UserRecipe(fromDictionary: $0) }
             completion(.success(recipes))
         }
     }
     
-    func deleteRecipe(with recipe: Recipe) {
+    func deleteRecipe(with recipe: UserRecipe) {
         guard let userID = Auth.auth().currentUser?.uid else { return }
         ref.collection(Constants.Collections.userRef).document(userID).collection(Constants.Collections.userRecipes).document(recipe.uuid).delete()
         deleteImage(from: recipe)
@@ -98,7 +100,7 @@ struct FirebaseService: FirebaseServicable {
         }
     }
     
-    func fetchImage(from recipe: Recipe, completion: @escaping (Result <UIImage, NetworkError>) -> Void) {
+    func fetchImage(from recipe: UserRecipe, completion: @escaping (Result <UIImage, NetworkError>) -> Void) {
         storage.child(Constants.RecipeImage.imageRef).child(recipe.uuid).getData(maxSize: 1024 * 1024) { result in
             switch result {
             case .success(let data):
@@ -110,7 +112,7 @@ struct FirebaseService: FirebaseServicable {
         }
     }
     
-    func deleteImage(from recipe: Recipe) {
+    func deleteImage(from recipe: UserRecipe) {
         storage.child(Constants.RecipeImage.imageRef).child(recipe.uuid).delete(completion: nil)
     }
     
