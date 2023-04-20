@@ -7,13 +7,12 @@
 
 import UIKit
 
-// Note: - Access each cell in the table view one at a time to retrieve the ingredient from it and add it to an array. Then, pass it into my initializer.
+// Note: - I need to get the information from my outlets in my custom cell.
 
 class CreateRecipeViewController: UIViewController {
 
     // MARK: - Properties
     var viewModel: CreateRecipeViewModel!
-    var cell: IngredientsTableViewCell?
     
     // MARK: - Outlets
     @IBOutlet weak var createRecipeImageView: UIImageView!
@@ -30,19 +29,19 @@ class CreateRecipeViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func addIngredientButtonTapped(_ sender: Any) {
-        viewModel.addIngredient(name: "", ammount: "", type: "")
+        viewModel.ingredients.append(UserIngredient(ingredientName: "", measurementNumber: "", measurementType: ""))
+        ingredientsTableView.reloadData()
     }
     
     @IBAction func saveRecipeButtonTapped(_ sender: Any) {
-        
         guard let recipeName = recipeNameTextField.text,
-              let instructions = createRecipeInstructionsTextView.text else { return }
-        guard let image = UIImage(named: "cooking") else { return }
+              let instructions = createRecipeInstructionsTextView.text,
+              let image = createRecipeImageView.image else { return }
         viewModel.saveRecipe(name: recipeName, instructions: instructions, ingredients: viewModel.ingredients, image: image)
     }
 }
 
-extension CreateRecipeViewController: UITableViewDataSource {
+extension CreateRecipeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.ingredients.count
     }
@@ -51,14 +50,14 @@ extension CreateRecipeViewController: UITableViewDataSource {
         guard let cell = ingredientsTableView.dequeueReusableCell(withIdentifier: "userIngredientCell", for: indexPath) as? IngredientsTableViewCell else { return UITableViewCell() }
         cell.setUpPopUpButton()
         let ingredient = viewModel.ingredients[indexPath.row]
-        cell.updateIngredient(with: ingredient)
+        cell.updateIngredient(ingredient: ingredient)
         return cell
     }
 }
 
 extension CreateRecipeViewController: CreateRecipeViewModelDelegate {
     func addRecipe() {
-        
+        // Note: - Pop view controller back to collection view and reload the view
     }
     
     func ingredientAdded() {

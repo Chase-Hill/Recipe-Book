@@ -19,6 +19,7 @@ class MealDBViewController: UIViewController {
     // MARK: - Properties
     var viewModel: MealDBViewModel!
     var dataSource: [MealDBRecipe] = []
+    var activityIndicator = UIActivityIndicatorView()
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -31,6 +32,7 @@ class MealDBViewController: UIViewController {
         layout.scrollDirection = .vertical
         mealDBSegmentedControl.addTarget(self, action: #selector(segmentChanged), for: .valueChanged)
         setUpDatasource()
+        setUpActivityIndicator()
         fetch()
     }
     
@@ -48,6 +50,24 @@ class MealDBViewController: UIViewController {
     func fetch() {
         viewModel.fetchFavoritesFromFirebase()
         mealDBCollectionView.reloadData()
+        stopAnimatingAndReloadData()
+    }
+    
+    func setUpActivityIndicator() {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = .large
+        self.view.addSubview(activityIndicator)
+        self.view.isUserInteractionEnabled = false
+        activityIndicator.startAnimating()
+    }
+
+    func stopAnimatingAndReloadData() {
+        DispatchQueue.main.async {
+            self.mealDBCollectionView.reloadData()
+            self.activityIndicator.stopAnimating()
+            self.view.isUserInteractionEnabled = true
+        }
     }
 }
 

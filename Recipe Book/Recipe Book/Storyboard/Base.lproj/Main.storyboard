@@ -711,6 +711,10 @@
                                     <constraint firstAttribute="width" constant="393" id="W7R-uP-fMq"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                                 <connections>
                                     <outlet property="delegate" destination="7cm-D4-Bbb" id="BCh-gU-JxZ"/>
                                 </connections>

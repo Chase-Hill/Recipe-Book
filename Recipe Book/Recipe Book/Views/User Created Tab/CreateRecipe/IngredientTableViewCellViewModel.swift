@@ -8,14 +8,15 @@
 import UIKit
 
 protocol IngredientTableViewCellViewModelDelegate: AnyObject {
-    func addIngredient()
+    func updateIngredient(ingredient: UserIngredient)
 }
 
 struct IngredientTableViewCellViewModel {
     
      // MARK: - Properties
-    let recipe: UserRecipe
+    private weak var delegate: IngredientTableViewCellViewModelDelegate?
     
-    // MARK: - Functions
-
+    init(delegate: IngredientTableViewCellViewModelDelegate) {
+        self.delegate = delegate
+    }
 }

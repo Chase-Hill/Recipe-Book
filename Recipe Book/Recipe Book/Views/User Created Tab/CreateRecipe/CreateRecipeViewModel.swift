@@ -17,7 +17,6 @@ class CreateRecipeViewModel {
     // MARK: - Properties
     var recipe: UserRecipe?
     var ingredients: [UserIngredient] = []
-    var cell: IngredientsTableViewCell?
     
     // MARK: - Dependencies
     private var service: FirebaseServicable

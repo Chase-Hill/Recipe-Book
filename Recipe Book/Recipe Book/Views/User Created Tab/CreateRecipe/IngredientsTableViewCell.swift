@@ -9,18 +9,15 @@ import UIKit
 
 class IngredientsTableViewCell: UITableViewCell {
     
+    // MARK: - Properties
+    var viewModel: IngredientTableViewCellViewModel!
+    
     // MARK: - Outlets
     @IBOutlet weak var ingredientNameTextField: UITextField!
     @IBOutlet weak var measurementAmountTextField: UITextField!
     @IBOutlet weak var measurementTypeButton: UIButton!
     
     // MARK: - Functions
-    func updateIngredient(with ingredient: UserIngredient) {
-        ingredientNameTextField.text = ingredient.ingredientName
-        measurementAmountTextField.text = ingredient.measurementNumber
-        measurementTypeButton.titleLabel?.text = ingredient.measurementType
-    }
-    
     func setUpPopUpButton() {
         let closure = { (action: UIAction) in
             print(action.title)
@@ -31,6 +28,7 @@ class IngredientsTableViewCell: UITableViewCell {
             UIAction(title: "Tbsp", handler: closure),
             UIAction(title: "Tsp", handler: closure),
             UIAction(title: "Pinch", handler: closure),
+            UIAction(title: "Dash", handler: closure),
             UIAction(title: "Lbs", handler: closure),
             UIAction(title: "Oz", handler: closure),
             UIAction(title: "Kg", handler: closure),
@@ -40,5 +38,13 @@ class IngredientsTableViewCell: UITableViewCell {
         ])
         measurementTypeButton.showsMenuAsPrimaryAction = true
         measurementTypeButton.changesSelectionAsPrimaryAction = true
+    }
+}
+
+extension IngredientsTableViewCell: IngredientTableViewCellViewModelDelegate {
+    func updateIngredient(ingredient: UserIngredient) {
+        ingredientNameTextField.text = ingredient.ingredientName
+        measurementAmountTextField.text = ingredient.measurementNumber
+        measurementTypeButton.titleLabel?.text = ingredient.measurementType
     }
 }
