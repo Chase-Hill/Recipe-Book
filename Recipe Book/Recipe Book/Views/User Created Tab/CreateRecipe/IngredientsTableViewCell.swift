@@ -15,6 +15,12 @@ class IngredientsTableViewCell: UITableViewCell {
     @IBOutlet weak var measurementTypeButton: UIButton!
     
     // MARK: - Functions
+    func updateIngredient(with ingredient: UserIngredient) {
+        ingredientNameTextField.text = ingredient.ingredientName
+        measurementAmountTextField.text = ingredient.measurementNumber
+        measurementTypeButton.titleLabel?.text = ingredient.measurementType
+    }
+    
     func setUpPopUpButton() {
         let closure = { (action: UIAction) in
             print(action.title)

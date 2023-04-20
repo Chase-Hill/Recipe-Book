@@ -9,6 +9,7 @@ import UIKit
 
 protocol CreateRecipeViewModelDelegate: AnyObject {
     func addRecipe()
+    func ingredientAdded()
 }
 
 class CreateRecipeViewModel {
@@ -34,5 +35,9 @@ class CreateRecipeViewModel {
         }
     }
     
-
+    func addIngredient(name: String, ammount: String, type: String) {
+        let newIngredient = UserIngredient(ingredientName: name, measurementNumber: ammount, measurementType: type)
+        ingredients.append(newIngredient)
+        self.delegate?.ingredientAdded()
+    }
 }
